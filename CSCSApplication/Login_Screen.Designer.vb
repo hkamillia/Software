@@ -43,9 +43,9 @@ Partial Class Login
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.uscLogo3
-        Me.PictureBox1.Location = New System.Drawing.Point(130, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(111, 36)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(171, 170)
+        Me.PictureBox1.Size = New System.Drawing.Size(94, 89)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -76,7 +76,7 @@ Partial Class Login
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(65, 235)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(326, 24)
         Me.Label1.TabIndex = 3
@@ -85,11 +85,11 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(430, 40)
+        Me.Label2.ForeColor = System.Drawing.Color.Green
+        Me.Label2.Location = New System.Drawing.Point(430, 73)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(276, 36)
         Me.Label2.TabIndex = 4
@@ -186,8 +186,9 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.OliveDrab
         Me.BackgroundImage = Global.CSCSApplication.My.Resources.Resources.calender3
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(777, 484)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Label3)
@@ -201,7 +202,9 @@ Partial Class Login
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Monotype Corsiva", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
         Me.Text = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
