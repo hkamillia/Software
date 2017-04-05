@@ -22,6 +22,36 @@ CSCSApplication
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:CSCSApplication.My.Resources.Resources.Big_USC_Logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.calendar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.calendar1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.calendar2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.calender3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.lock_grey">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CSCSApplication.My.Resources.Resources.schedule_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -33,6 +63,41 @@ CSCSApplication
 </summary>
 </member>
 <member name="P:CSCSApplication.My.Resources.Resources.usc_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.uscLogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.uscLogo1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.uscLogo2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.uscLogo3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.User">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.User_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CSCSApplication.My.Resources.Resources.user_icon_placeholder">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
