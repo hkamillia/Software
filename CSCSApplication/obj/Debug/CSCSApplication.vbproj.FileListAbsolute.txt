@@ -1,2 +1,12 @@
 c:\users\kamillia\documents\visual studio 2015\Projects\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.exe.config
 C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.exe.config
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.exe
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.pdb
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.xml
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.vbprojResolveAssemblyReference.cache
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.Form1.resources
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.Resources.resources
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.vbproj.GenerateResource.Cache
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.exe
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.xml
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\obj\Debug\CSCSApplication.pdb
