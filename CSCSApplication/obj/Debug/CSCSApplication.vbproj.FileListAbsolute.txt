@@ -14,6 +14,10 @@ C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\bin\Debug\CSCSApplication.e
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.exe
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.xml
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.pdb
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\bin\Debug\CSCSApplication.exe.config
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\obj\Debug\CSCSApplication.exe
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\obj\Debug\CSCSApplication.xml
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\obj\Debug\CSCSApplication.pdb
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\bin\Debug\CSCSApplication.exe
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\bin\Debug\CSCSApplication.pdb
 C:\Users\Anton\Desktop\CSCS\Software\CSCSApplication\bin\Debug\CSCSApplication.xml

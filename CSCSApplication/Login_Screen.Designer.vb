@@ -53,6 +53,7 @@ Partial Class Login
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.Ivory
         Me.TextBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Silver
         Me.TextBox1.Location = New System.Drawing.Point(416, 146)
@@ -63,6 +64,7 @@ Partial Class Login
         '
         'TextBox2
         '
+        Me.TextBox2.BackColor = System.Drawing.Color.Ivory
         Me.TextBox2.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.Silver
         Me.TextBox2.Location = New System.Drawing.Point(416, 191)
@@ -76,7 +78,7 @@ Partial Class Login
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.GreenYellow
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(326, 24)
@@ -86,11 +88,11 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Green
-        Me.Label2.Location = New System.Drawing.Point(430, 73)
+        Me.Label2.ForeColor = System.Drawing.Color.GreenYellow
+        Me.Label2.Location = New System.Drawing.Point(430, 75)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(276, 36)
         Me.Label2.TabIndex = 4
@@ -135,8 +137,9 @@ Partial Class Login
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Gold
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.ForeColor = System.Drawing.Color.GreenYellow
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.Gold
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.GreenYellow
         Me.LinkLabel1.Location = New System.Drawing.Point(541, 314)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(54, 24)
@@ -150,7 +153,7 @@ Partial Class Login
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.Gold
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.GreenYellow
         Me.LinkLabel2.Location = New System.Drawing.Point(508, 338)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(147, 24)
@@ -183,24 +186,14 @@ Partial Class Login
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Forgot your password?"
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(368, 426)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.OliveDrab
+        Me.BackColor = System.Drawing.Color.Ivory
         Me.BackgroundImage = Global.CSCSApplication.My.Resources.Resources.calender3
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(777, 484)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel2)
@@ -238,5 +231,4 @@ Partial Class Login
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents LinkLabel3 As LinkLabel
-    Friend WithEvents Button2 As Button
 End Class
