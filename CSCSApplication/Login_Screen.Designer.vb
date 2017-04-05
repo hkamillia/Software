@@ -33,6 +33,7 @@ Partial Class Login
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -167,6 +168,20 @@ Partial Class Login
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "|"
         '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.Gold
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.Gold
+        Me.LinkLabel3.Location = New System.Drawing.Point(508, 362)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(147, 24)
+        Me.LinkLabel3.TabIndex = 13
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Forgot your password?"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -174,6 +189,7 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.BackgroundImage = Global.CSCSApplication.My.Resources.Resources.calender3
         Me.ClientSize = New System.Drawing.Size(777, 484)
+        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
@@ -207,4 +223,5 @@ Partial Class Login
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Label3 As Label
+    Friend WithEvents LinkLabel3 As LinkLabel
 End Class
