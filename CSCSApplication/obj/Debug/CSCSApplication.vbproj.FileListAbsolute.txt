@@ -1,0 +1,2 @@
+c:\users\kamillia\documents\visual studio 2015\Projects\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.exe.config
+C:\Users\Kamillia\Desktop\GitHub\CSCSApplication\CSCSApplication\bin\Debug\CSCSApplication.exe.config
