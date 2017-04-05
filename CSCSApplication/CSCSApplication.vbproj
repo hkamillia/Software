@@ -72,11 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Login_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Login_Screen.Designer.vb">
+      <DependentUpon>Login_Screen.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,8 +96,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Login_Screen.resx">
+      <DependentUpon>Login_Screen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -126,6 +126,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\schedule_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calender3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Big USC Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uscLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uscLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uscLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uscLogo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_grey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
