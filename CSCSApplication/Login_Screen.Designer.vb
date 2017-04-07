@@ -23,18 +23,16 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtUsername = New System.Windows.Forms.TextBox()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnLogin = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,27 +49,27 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
+        'TxtUsername
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.Ivory
-        Me.TextBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Silver
-        Me.TextBox1.Location = New System.Drawing.Point(416, 146)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(300, 30)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "Username"
+        Me.TxtUsername.BackColor = System.Drawing.Color.Ivory
+        Me.TxtUsername.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsername.ForeColor = System.Drawing.Color.Silver
+        Me.TxtUsername.Location = New System.Drawing.Point(416, 146)
+        Me.TxtUsername.Name = "TxtUsername"
+        Me.TxtUsername.Size = New System.Drawing.Size(300, 30)
+        Me.TxtUsername.TabIndex = 1
+        Me.TxtUsername.Text = "Username"
         '
-        'TextBox2
+        'TxtPassword
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.Ivory
-        Me.TextBox2.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Silver
-        Me.TextBox2.Location = New System.Drawing.Point(416, 191)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(300, 30)
-        Me.TextBox2.TabIndex = 2
-        Me.TextBox2.Text = "Password"
+        Me.TxtPassword.BackColor = System.Drawing.Color.Ivory
+        Me.TxtPassword.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPassword.ForeColor = System.Drawing.Color.Silver
+        Me.TxtPassword.Location = New System.Drawing.Point(416, 191)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.Size = New System.Drawing.Size(300, 30)
+        Me.TxtPassword.TabIndex = 2
+        Me.TxtPassword.Text = "Password"
         '
         'Label1
         '
@@ -102,9 +100,9 @@ Partial Class Login
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.Window
         Me.PictureBox2.Image = Global.CSCSApplication.My.Resources.Resources.User
-        Me.PictureBox2.Location = New System.Drawing.Point(683, 146)
+        Me.PictureBox2.Location = New System.Drawing.Point(683, 151)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 30)
+        Me.PictureBox2.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
@@ -113,29 +111,30 @@ Partial Class Login
         '
         Me.PictureBox3.BackColor = System.Drawing.SystemColors.Window
         Me.PictureBox3.Image = Global.CSCSApplication.My.Resources.Resources.lock_grey
-        Me.PictureBox3.Location = New System.Drawing.Point(683, 191)
+        Me.PictureBox3.Location = New System.Drawing.Point(683, 196)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(23, 30)
+        Me.PictureBox3.Size = New System.Drawing.Size(23, 21)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 8
         Me.PictureBox3.TabStop = False
         '
-        'Button1
+        'BtnLogin
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Agency FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(416, 249)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(300, 42)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.BtnLogin.Font = New System.Drawing.Font("Agency FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.ForeColor = System.Drawing.Color.White
+        Me.BtnLogin.Location = New System.Drawing.Point(416, 249)
+        Me.BtnLogin.Name = "BtnLogin"
+        Me.BtnLogin.Size = New System.Drawing.Size(300, 42)
+        Me.BtnLogin.TabIndex = 9
+        Me.BtnLogin.Text = "Login"
+        Me.BtnLogin.UseVisualStyleBackColor = False
         '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Gold
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.ForeColor = System.Drawing.Color.GreenYellow
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -151,6 +150,7 @@ Partial Class Login
         '
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.Gold
         Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.BackColor = System.Drawing.Color.Ivory
         Me.LinkLabel2.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LinkLabel2.LinkColor = System.Drawing.Color.GreenYellow
@@ -164,6 +164,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gold
         Me.Label3.Location = New System.Drawing.Point(601, 314)
@@ -171,20 +172,6 @@ Partial Class Login
         Me.Label3.Size = New System.Drawing.Size(14, 24)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "|"
-        '
-        'LinkLabel3
-        '
-        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.Gold
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel3.LinkColor = System.Drawing.Color.Gold
-        Me.LinkLabel3.Location = New System.Drawing.Point(508, 362)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(147, 24)
-        Me.LinkLabel3.TabIndex = 13
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "Forgot your password?"
         '
         'Login
         '
@@ -194,22 +181,21 @@ Partial Class Login
         Me.BackgroundImage = Global.CSCSApplication.My.Resources.Resources.calender3
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(777, 484)
-        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.TxtUsername)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Monotype Corsiva", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -220,15 +206,14 @@ Partial Class Login
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtUsername As TextBox
+    Friend WithEvents TxtPassword As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnLogin As Button
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Label3 As Label
-    Friend WithEvents LinkLabel3 As LinkLabel
 End Class

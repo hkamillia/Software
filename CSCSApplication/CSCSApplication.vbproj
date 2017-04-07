@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateTimetable.Designer.vb">
+      <DependentUpon>CreateTimetable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTimetable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickSemester.Designer.vb">
+      <DependentUpon>PickSemester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PickSemester.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -108,8 +120,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CreateTimetable.resx">
+      <DependentUpon>CreateTimetable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickSemester.resx">
+      <DependentUpon>PickSemester.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Screen.resx">
       <DependentUpon>Login_Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -180,6 +201,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock_grey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light usc logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
