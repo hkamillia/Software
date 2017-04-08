@@ -6,6 +6,10 @@ Public Class Login
     Dim connString As String
     Dim myConnection As OleDbConnection = New OleDbConnection
 
+    Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         Login()
     End Sub
@@ -91,12 +95,10 @@ Public Class Login
 
 
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
-
         Dim response As MsgBoxResult
         response = MsgBox("Are you sure that you want to exit this application?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm")
         If response = MsgBoxResult.Yes Then
-            Environment.Exit(0)
+            Application.Exit()
         ElseIf response = MsgBoxResult.No Then
             e.Cancel = True
             Exit Sub

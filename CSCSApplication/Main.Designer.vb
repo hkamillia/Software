@@ -25,12 +25,12 @@ Partial Class Main
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblCSCS = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.BtnLecturers = New System.Windows.Forms.Button()
+        Me.BtnCreate = New System.Windows.Forms.Button()
+        Me.BtnView = New System.Windows.Forms.Button()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnLabs = New System.Windows.Forms.Button()
         Me.LblAdmin = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,9 +41,10 @@ Partial Class Main
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Panel1.Controls.Add(Me.LblCSCS)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(0, -1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(779, 49)
+        Me.Panel1.Size = New System.Drawing.Size(777, 49)
         Me.Panel1.TabIndex = 0
         '
         'LblCSCS
@@ -67,59 +68,59 @@ Partial Class Main
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'BtnLecturers
         '
-        Me.Button1.Location = New System.Drawing.Point(38, 107)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(145, 40)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Manage Lecturers"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnLecturers.Location = New System.Drawing.Point(38, 107)
+        Me.BtnLecturers.Name = "BtnLecturers"
+        Me.BtnLecturers.Size = New System.Drawing.Size(145, 40)
+        Me.BtnLecturers.TabIndex = 1
+        Me.BtnLecturers.Text = "Manage Lecturers"
+        Me.BtnLecturers.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnCreate
         '
-        Me.Button2.Location = New System.Drawing.Point(38, 192)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(145, 40)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Create Timetable"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnCreate.Location = New System.Drawing.Point(38, 192)
+        Me.BtnCreate.Name = "BtnCreate"
+        Me.BtnCreate.Size = New System.Drawing.Size(145, 40)
+        Me.BtnCreate.TabIndex = 2
+        Me.BtnCreate.Text = "Create Timetable"
+        Me.BtnCreate.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BtnView
         '
-        Me.Button3.Location = New System.Drawing.Point(223, 192)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(145, 40)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "View Timetable"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnView.Location = New System.Drawing.Point(223, 192)
+        Me.BtnView.Name = "BtnView"
+        Me.BtnView.Size = New System.Drawing.Size(145, 40)
+        Me.BtnView.TabIndex = 3
+        Me.BtnView.Text = "View Timetable"
+        Me.BtnView.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BtnUpdate
         '
-        Me.Button4.Location = New System.Drawing.Point(411, 192)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(145, 40)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Update Timetable"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BtnUpdate.Location = New System.Drawing.Point(411, 192)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(145, 40)
+        Me.BtnUpdate.TabIndex = 4
+        Me.BtnUpdate.Text = "Update Timetable"
+        Me.BtnUpdate.UseVisualStyleBackColor = True
         '
-        'Button5
+        'BtnDelete
         '
-        Me.Button5.Location = New System.Drawing.Point(597, 192)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(145, 40)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Delete Timetable"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BtnDelete.Location = New System.Drawing.Point(597, 192)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(145, 40)
+        Me.BtnDelete.TabIndex = 5
+        Me.BtnDelete.Text = "Delete Timetable"
+        Me.BtnDelete.UseVisualStyleBackColor = True
         '
-        'Button6
+        'BtnLabs
         '
-        Me.Button6.Location = New System.Drawing.Point(38, 277)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(145, 40)
-        Me.Button6.TabIndex = 6
-        Me.Button6.Text = "Manage Labs"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.BtnLabs.Location = New System.Drawing.Point(38, 277)
+        Me.BtnLabs.Name = "BtnLabs"
+        Me.BtnLabs.Size = New System.Drawing.Size(145, 40)
+        Me.BtnLabs.TabIndex = 6
+        Me.BtnLabs.Text = "Manage Labs"
+        Me.BtnLabs.UseVisualStyleBackColor = True
         '
         'LblAdmin
         '
@@ -137,12 +138,12 @@ Partial Class Main
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(777, 484)
         Me.Controls.Add(Me.LblAdmin)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnLabs)
+        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.BtnUpdate)
+        Me.Controls.Add(Me.BtnView)
+        Me.Controls.Add(Me.BtnCreate)
+        Me.Controls.Add(Me.BtnLecturers)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Main"
         Me.Text = "Main"
@@ -157,11 +158,11 @@ Partial Class Main
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LblCSCS As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents BtnLecturers As Button
+    Friend WithEvents BtnCreate As Button
+    Friend WithEvents BtnView As Button
+    Friend WithEvents BtnUpdate As Button
+    Friend WithEvents BtnDelete As Button
+    Friend WithEvents BtnLabs As Button
     Friend WithEvents LblAdmin As Label
 End Class

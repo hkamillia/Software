@@ -58,6 +58,7 @@ Partial Class Login
         Me.TxtUsername.Name = "TxtUsername"
         Me.TxtUsername.Size = New System.Drawing.Size(300, 30)
         Me.TxtUsername.TabIndex = 1
+        Me.TxtUsername.TabStop = False
         Me.TxtUsername.Text = "Username"
         '
         'TxtPassword
@@ -69,6 +70,7 @@ Partial Class Login
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.Size = New System.Drawing.Size(300, 30)
         Me.TxtPassword.TabIndex = 2
+        Me.TxtPassword.TabStop = False
         Me.TxtPassword.Text = "Password"
         '
         'Label1

@@ -41,3 +41,4 @@ C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\bin\Debug\CSCSApplicatio
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.PickSemCreate.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.Main.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.CreateTimetable.resources
+C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.Lecturers.resources

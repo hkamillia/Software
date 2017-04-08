@@ -24,7 +24,6 @@ Partial Class PickSemCreate
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnSemester1 = New System.Windows.Forms.RadioButton()
         Me.BtnSemester2 = New System.Windows.Forms.RadioButton()
         Me.BtnSemester3 = New System.Windows.Forms.RadioButton()
@@ -42,9 +41,14 @@ Partial Class PickSemCreate
         Me.LblDelete = New System.Windows.Forms.Label()
         Me.LblNext = New System.Windows.Forms.LinkLabel()
         Me.LblBack = New System.Windows.Forms.LinkLabel()
+        Me.LblCredits = New System.Windows.Forms.Label()
+        Me.TxtCredits = New System.Windows.Forms.TextBox()
+        Me.TxtClassSize = New System.Windows.Forms.TextBox()
+        Me.LblClassSize = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -52,9 +56,10 @@ Partial Class PickSemCreate
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(0, 1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(779, 49)
+        Me.Panel1.Size = New System.Drawing.Size(777, 49)
         Me.Panel1.TabIndex = 1
         '
         'Label1
@@ -67,16 +72,6 @@ Partial Class PickSemCreate
         Me.Label1.Size = New System.Drawing.Size(375, 28)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Computer Science Course Scheduler"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'BtnSemester1
         '
@@ -151,7 +146,7 @@ Partial Class PickSemCreate
         'LblCrsType
         '
         Me.LblCrsType.AutoSize = True
-        Me.LblCrsType.Location = New System.Drawing.Point(509, 170)
+        Me.LblCrsType.Location = New System.Drawing.Point(505, 219)
         Me.LblCrsType.Name = "LblCrsType"
         Me.LblCrsType.Size = New System.Drawing.Size(70, 13)
         Me.LblCrsType.TabIndex = 17
@@ -159,16 +154,17 @@ Partial Class PickSemCreate
         '
         'CmbType
         '
+        Me.CmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbType.FormattingEnabled = True
         Me.CmbType.Items.AddRange(New Object() {"Core", "Cognate", "Emphasis", "Elective", "General Ed"})
-        Me.CmbType.Location = New System.Drawing.Point(505, 186)
+        Me.CmbType.Location = New System.Drawing.Point(505, 235)
         Me.CmbType.Name = "CmbType"
-        Me.CmbType.Size = New System.Drawing.Size(156, 21)
+        Me.CmbType.Size = New System.Drawing.Size(152, 21)
         Me.CmbType.TabIndex = 18
         '
         'BtnAdd
         '
-        Me.BtnAdd.Location = New System.Drawing.Point(676, 186)
+        Me.BtnAdd.Location = New System.Drawing.Point(672, 281)
         Me.BtnAdd.Name = "BtnAdd"
         Me.BtnAdd.Size = New System.Drawing.Size(75, 23)
         Me.BtnAdd.TabIndex = 19
@@ -177,9 +173,9 @@ Partial Class PickSemCreate
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(512, 275)
+        Me.BtnDelete.Location = New System.Drawing.Point(672, 327)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(97, 27)
+        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
         Me.BtnDelete.TabIndex = 21
         Me.BtnDelete.Text = "Delete "
         Me.BtnDelete.UseVisualStyleBackColor = True
@@ -208,7 +204,7 @@ Partial Class PickSemCreate
         'LblDelete
         '
         Me.LblDelete.AutoSize = True
-        Me.LblDelete.Location = New System.Drawing.Point(517, 253)
+        Me.LblDelete.Location = New System.Drawing.Point(509, 334)
         Me.LblDelete.Name = "LblDelete"
         Me.LblDelete.Size = New System.Drawing.Size(157, 13)
         Me.LblDelete.TabIndex = 23
@@ -220,7 +216,7 @@ Partial Class PickSemCreate
         Me.LblNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNext.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LblNext.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblNext.Location = New System.Drawing.Point(516, 376)
+        Me.LblNext.Location = New System.Drawing.Point(508, 413)
         Me.LblNext.Name = "LblNext"
         Me.LblNext.Size = New System.Drawing.Size(59, 20)
         Me.LblNext.TabIndex = 24
@@ -233,12 +229,54 @@ Partial Class PickSemCreate
         Me.LblBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBack.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LblBack.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblBack.Location = New System.Drawing.Point(399, 376)
+        Me.LblBack.Location = New System.Drawing.Point(404, 413)
         Me.LblBack.Name = "LblBack"
         Me.LblBack.Size = New System.Drawing.Size(63, 20)
         Me.LblBack.TabIndex = 2
         Me.LblBack.TabStop = True
         Me.LblBack.Text = "<<Back"
+        '
+        'LblCredits
+        '
+        Me.LblCredits.AutoSize = True
+        Me.LblCredits.Location = New System.Drawing.Point(509, 170)
+        Me.LblCredits.Name = "LblCredits"
+        Me.LblCredits.Size = New System.Drawing.Size(42, 13)
+        Me.LblCredits.TabIndex = 25
+        Me.LblCredits.Text = "Credits:"
+        '
+        'TxtCredits
+        '
+        Me.TxtCredits.Location = New System.Drawing.Point(505, 185)
+        Me.TxtCredits.Name = "TxtCredits"
+        Me.TxtCredits.Size = New System.Drawing.Size(152, 20)
+        Me.TxtCredits.TabIndex = 26
+        '
+        'TxtClassSize
+        '
+        Me.TxtClassSize.Location = New System.Drawing.Point(505, 284)
+        Me.TxtClassSize.Name = "TxtClassSize"
+        Me.TxtClassSize.Size = New System.Drawing.Size(152, 20)
+        Me.TxtClassSize.TabIndex = 27
+        '
+        'LblClassSize
+        '
+        Me.LblClassSize.AutoSize = True
+        Me.LblClassSize.Location = New System.Drawing.Point(509, 268)
+        Me.LblClassSize.Name = "LblClassSize"
+        Me.LblClassSize.Size = New System.Drawing.Size(105, 13)
+        Me.LblClassSize.TabIndex = 28
+        Me.LblClassSize.Text = "Maximum Class Size:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'PickSemCreate
         '
@@ -246,6 +284,10 @@ Partial Class PickSemCreate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(777, 484)
+        Me.Controls.Add(Me.LblClassSize)
+        Me.Controls.Add(Me.TxtClassSize)
+        Me.Controls.Add(Me.TxtCredits)
+        Me.Controls.Add(Me.LblCredits)
         Me.Controls.Add(Me.LblBack)
         Me.Controls.Add(Me.LblNext)
         Me.Controls.Add(Me.LblDelete)
@@ -264,9 +306,9 @@ Partial Class PickSemCreate
         Me.Text = "Pick a Semester"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -292,4 +334,8 @@ Partial Class PickSemCreate
     Friend WithEvents LblDelete As Label
     Friend WithEvents LblNext As LinkLabel
     Friend WithEvents LblBack As LinkLabel
+    Friend WithEvents LblCredits As Label
+    Friend WithEvents TxtCredits As TextBox
+    Friend WithEvents TxtClassSize As TextBox
+    Friend WithEvents LblClassSize As Label
 End Class
