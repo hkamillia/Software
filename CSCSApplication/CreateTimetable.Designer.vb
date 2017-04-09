@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CreateTimetable
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CreateTimetable
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblCSCS = New System.Windows.Forms.Label()
@@ -48,8 +48,14 @@ Partial Class CreateTimetable
         Me.LblLecturers = New System.Windows.Forms.Label()
         Me.LblLabs = New System.Windows.Forms.Label()
         Me.LblBack = New System.Windows.Forms.LinkLabel()
-        Me.BtnCheck = New System.Windows.Forms.Button()
-        Me.BtnSave = New System.Windows.Forms.Button()
+        Me.BtnCheckCourses = New System.Windows.Forms.Button()
+        Me.BtnSave1 = New System.Windows.Forms.Button()
+        Me.BtnRemove = New System.Windows.Forms.Button()
+        Me.BtnCheckLecturers = New System.Windows.Forms.Button()
+        Me.BtnCheckLabs = New System.Windows.Forms.Button()
+        Me.BtnSave2 = New System.Windows.Forms.Button()
+        Me.BtnSave3 = New System.Windows.Forms.Button()
+        Me.BtnSave4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -63,7 +69,7 @@ Partial Class CreateTimetable
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(777, 49)
+        Me.Panel1.Size = New System.Drawing.Size(862, 49)
         Me.Panel1.TabIndex = 4
         '
         'LblCSCS
@@ -114,7 +120,6 @@ Partial Class CreateTimetable
         Me.BtnMW.Name = "BtnMW"
         Me.BtnMW.Size = New System.Drawing.Size(125, 17)
         Me.BtnMW.TabIndex = 6
-        Me.BtnMW.TabStop = True
         Me.BtnMW.Text = "Monday/Wednesday"
         Me.BtnMW.UseVisualStyleBackColor = True
         '
@@ -125,12 +130,12 @@ Partial Class CreateTimetable
         Me.BtnTuTh.Name = "BtnTuTh"
         Me.BtnTuTh.Size = New System.Drawing.Size(115, 17)
         Me.BtnTuTh.TabIndex = 7
-        Me.BtnTuTh.TabStop = True
         Me.BtnTuTh.Text = "Tuesday/Thursday"
         Me.BtnTuTh.UseVisualStyleBackColor = True
         '
         'CmbCourses1
         '
+        Me.CmbCourses1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbCourses1.FormattingEnabled = True
         Me.CmbCourses1.Location = New System.Drawing.Point(252, 149)
         Me.CmbCourses1.Name = "CmbCourses1"
@@ -139,6 +144,7 @@ Partial Class CreateTimetable
         '
         'CmbCourses2
         '
+        Me.CmbCourses2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbCourses2.FormattingEnabled = True
         Me.CmbCourses2.Location = New System.Drawing.Point(252, 188)
         Me.CmbCourses2.Name = "CmbCourses2"
@@ -147,6 +153,7 @@ Partial Class CreateTimetable
         '
         'CmbCourses3
         '
+        Me.CmbCourses3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbCourses3.FormattingEnabled = True
         Me.CmbCourses3.Location = New System.Drawing.Point(252, 231)
         Me.CmbCourses3.Name = "CmbCourses3"
@@ -155,6 +162,7 @@ Partial Class CreateTimetable
         '
         'CmbLecturers1
         '
+        Me.CmbLecturers1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLecturers1.FormattingEnabled = True
         Me.CmbLecturers1.Location = New System.Drawing.Point(477, 149)
         Me.CmbLecturers1.Name = "CmbLecturers1"
@@ -163,6 +171,7 @@ Partial Class CreateTimetable
         '
         'CmbLecturers2
         '
+        Me.CmbLecturers2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLecturers2.FormattingEnabled = True
         Me.CmbLecturers2.Location = New System.Drawing.Point(477, 188)
         Me.CmbLecturers2.Name = "CmbLecturers2"
@@ -171,6 +180,7 @@ Partial Class CreateTimetable
         '
         'CmbLecturers3
         '
+        Me.CmbLecturers3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLecturers3.FormattingEnabled = True
         Me.CmbLecturers3.Location = New System.Drawing.Point(477, 231)
         Me.CmbLecturers3.Name = "CmbLecturers3"
@@ -179,6 +189,7 @@ Partial Class CreateTimetable
         '
         'CmbLabs1
         '
+        Me.CmbLabs1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLabs1.FormattingEnabled = True
         Me.CmbLabs1.Location = New System.Drawing.Point(630, 149)
         Me.CmbLabs1.Name = "CmbLabs1"
@@ -187,6 +198,7 @@ Partial Class CreateTimetable
         '
         'CmbLabs2
         '
+        Me.CmbLabs2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLabs2.FormattingEnabled = True
         Me.CmbLabs2.Location = New System.Drawing.Point(630, 188)
         Me.CmbLabs2.Name = "CmbLabs2"
@@ -195,6 +207,7 @@ Partial Class CreateTimetable
         '
         'CmbLabs3
         '
+        Me.CmbLabs3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLabs3.FormattingEnabled = True
         Me.CmbLabs3.Location = New System.Drawing.Point(630, 231)
         Me.CmbLabs3.Name = "CmbLabs3"
@@ -203,6 +216,7 @@ Partial Class CreateTimetable
         '
         'CmbLabs4
         '
+        Me.CmbLabs4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLabs4.FormattingEnabled = True
         Me.CmbLabs4.Location = New System.Drawing.Point(630, 275)
         Me.CmbLabs4.Name = "CmbLabs4"
@@ -211,6 +225,7 @@ Partial Class CreateTimetable
         '
         'CmbLecturers4
         '
+        Me.CmbLecturers4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbLecturers4.FormattingEnabled = True
         Me.CmbLecturers4.Location = New System.Drawing.Point(477, 275)
         Me.CmbLecturers4.Name = "CmbLecturers4"
@@ -219,6 +234,7 @@ Partial Class CreateTimetable
         '
         'CmbCourses4
         '
+        Me.CmbCourses4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbCourses4.FormattingEnabled = True
         Me.CmbCourses4.Location = New System.Drawing.Point(252, 275)
         Me.CmbCourses4.Name = "CmbCourses4"
@@ -236,6 +252,7 @@ Partial Class CreateTimetable
         '
         'CmbTimes
         '
+        Me.CmbTimes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbTimes.FormattingEnabled = True
         Me.CmbTimes.Items.AddRange(New Object() {"8:00AM-9:15AM", "9:25AM-10:40AM", "10:50AM-12:05PM", "12:15PM-1:30PM", "1:40PM-2:55PM", "3:05PM-4:20PM", "4:30PM-5:45PM", "5:55PM-7:10PM", "7:20PM-8:35PM"})
         Me.CmbTimes.Location = New System.Drawing.Point(23, 146)
@@ -292,32 +309,93 @@ Partial Class CreateTimetable
         Me.LblBack.TabStop = True
         Me.LblBack.Text = "<<Back"
         '
-        'BtnCheck
+        'BtnCheckCourses
         '
-        Me.BtnCheck.Location = New System.Drawing.Point(288, 326)
-        Me.BtnCheck.Name = "BtnCheck"
-        Me.BtnCheck.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCheck.TabIndex = 28
-        Me.BtnCheck.Text = "Check"
-        Me.BtnCheck.UseVisualStyleBackColor = True
+        Me.BtnCheckCourses.Location = New System.Drawing.Point(298, 322)
+        Me.BtnCheckCourses.Name = "BtnCheckCourses"
+        Me.BtnCheckCourses.Size = New System.Drawing.Size(75, 23)
+        Me.BtnCheckCourses.TabIndex = 28
+        Me.BtnCheckCourses.Text = "Check"
+        Me.BtnCheckCourses.UseVisualStyleBackColor = True
         '
-        'BtnSave
+        'BtnSave1
         '
-        Me.BtnSave.Location = New System.Drawing.Point(406, 326)
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSave.TabIndex = 29
-        Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnSave1.Location = New System.Drawing.Point(775, 149)
+        Me.BtnSave1.Name = "BtnSave1"
+        Me.BtnSave1.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave1.TabIndex = 29
+        Me.BtnSave1.Text = "Save"
+        Me.BtnSave1.UseVisualStyleBackColor = True
+        '
+        'BtnRemove
+        '
+        Me.BtnRemove.Enabled = False
+        Me.BtnRemove.Location = New System.Drawing.Point(66, 226)
+        Me.BtnRemove.Name = "BtnRemove"
+        Me.BtnRemove.Size = New System.Drawing.Size(111, 32)
+        Me.BtnRemove.TabIndex = 30
+        Me.BtnRemove.Text = "Remove a Course"
+        Me.BtnRemove.UseVisualStyleBackColor = True
+        '
+        'BtnCheckLecturers
+        '
+        Me.BtnCheckLecturers.Location = New System.Drawing.Point(494, 322)
+        Me.BtnCheckLecturers.Name = "BtnCheckLecturers"
+        Me.BtnCheckLecturers.Size = New System.Drawing.Size(75, 23)
+        Me.BtnCheckLecturers.TabIndex = 31
+        Me.BtnCheckLecturers.Text = "Check"
+        Me.BtnCheckLecturers.UseVisualStyleBackColor = True
+        '
+        'BtnCheckLabs
+        '
+        Me.BtnCheckLabs.Location = New System.Drawing.Point(647, 322)
+        Me.BtnCheckLabs.Name = "BtnCheckLabs"
+        Me.BtnCheckLabs.Size = New System.Drawing.Size(75, 23)
+        Me.BtnCheckLabs.TabIndex = 32
+        Me.BtnCheckLabs.Text = "Check"
+        Me.BtnCheckLabs.UseVisualStyleBackColor = True
+        '
+        'BtnSave2
+        '
+        Me.BtnSave2.Location = New System.Drawing.Point(775, 188)
+        Me.BtnSave2.Name = "BtnSave2"
+        Me.BtnSave2.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave2.TabIndex = 33
+        Me.BtnSave2.Text = "Save"
+        Me.BtnSave2.UseVisualStyleBackColor = True
+        '
+        'BtnSave3
+        '
+        Me.BtnSave3.Location = New System.Drawing.Point(775, 231)
+        Me.BtnSave3.Name = "BtnSave3"
+        Me.BtnSave3.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave3.TabIndex = 34
+        Me.BtnSave3.Text = "Save"
+        Me.BtnSave3.UseVisualStyleBackColor = True
+        '
+        'BtnSave4
+        '
+        Me.BtnSave4.Location = New System.Drawing.Point(775, 273)
+        Me.BtnSave4.Name = "BtnSave4"
+        Me.BtnSave4.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave4.TabIndex = 35
+        Me.BtnSave4.Text = "Save"
+        Me.BtnSave4.UseVisualStyleBackColor = True
         '
         'CreateTimetable
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(777, 484)
-        Me.Controls.Add(Me.BtnSave)
-        Me.Controls.Add(Me.BtnCheck)
+        Me.ClientSize = New System.Drawing.Size(862, 484)
+        Me.Controls.Add(Me.BtnSave4)
+        Me.Controls.Add(Me.BtnSave3)
+        Me.Controls.Add(Me.BtnSave2)
+        Me.Controls.Add(Me.BtnCheckLabs)
+        Me.Controls.Add(Me.BtnCheckLecturers)
+        Me.Controls.Add(Me.BtnRemove)
+        Me.Controls.Add(Me.BtnSave1)
+        Me.Controls.Add(Me.BtnCheckCourses)
         Me.Controls.Add(Me.LblBack)
         Me.Controls.Add(Me.LblLabs)
         Me.Controls.Add(Me.LblLecturers)
@@ -379,6 +457,12 @@ Partial Class CreateTimetable
     Friend WithEvents LblLecturers As Label
     Friend WithEvents LblLabs As Label
     Friend WithEvents LblBack As LinkLabel
-    Friend WithEvents BtnCheck As Button
-    Friend WithEvents BtnSave As Button
+    Friend WithEvents BtnCheckCourses As Button
+    Friend WithEvents BtnSave1 As Button
+    Friend WithEvents BtnRemove As Button
+    Friend WithEvents BtnCheckLecturers As Button
+    Friend WithEvents BtnCheckLabs As Button
+    Friend WithEvents BtnSave2 As Button
+    Friend WithEvents BtnSave3 As Button
+    Friend WithEvents BtnSave4 As Button
 End Class
