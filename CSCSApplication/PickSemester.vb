@@ -158,7 +158,6 @@ Public Class PickSemCreate
         If dr.HasRows = True Then
             dr.Read()
             If dr.Item(0) = 0 Then 'Course can be added
-
                 Dim str As String
                 str = "insert into courses ([CourseCode], [CourseTitle],[Credits], [Type], [Priority],[MaxClassSize], [SemesterOffered])
                values (?, ?, ?, ?, ?, ?, ?)"

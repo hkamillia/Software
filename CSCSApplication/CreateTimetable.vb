@@ -26,6 +26,7 @@ Public Class CreateTimetable
         CmbCourses4.Visible = False
         CmbLecturers4.Visible = False
         CmbLabs4.Visible = False
+        BtnSave4.Visible = False
     End Sub
 
     Private Sub BtnAddNew_Click(sender As Object, e As EventArgs) Handles BtnAddNew.Click
@@ -33,12 +34,14 @@ Public Class CreateTimetable
         CmbCourses4.Visible = True
         CmbLecturers4.Visible = True
         CmbLabs4.Visible = True
+        BtnSave4.Visible = True
     End Sub
 
     Private Sub BtnRemove_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
         CmbCourses4.Visible = False
         CmbLecturers4.Visible = False
         CmbLabs4.Visible = False
+        BtnSave4.Visible = False
         BtnRemove.Enabled = False
     End Sub
 
@@ -394,11 +397,6 @@ Public Class CreateTimetable
         End If
     End Sub
 
-    Private Sub LblBack_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblBack.LinkClicked
-        Hide()
-        PickSemCreate.Show()
-    End Sub
-
     Private Sub BtnCheckCourses_Click(sender As Object, e As EventArgs) Handles BtnCheckCourses.Click
         getPriority1()
     End Sub
@@ -734,80 +732,274 @@ Public Class CreateTimetable
         End If
     End Sub
 
-    'Private Sub BtnSave1_Click(sender As Object, e As EventArgs) Handles BtnSave1.Click
-    '    getCourseCode1()
-    'End Sub
+    Private Sub BtnSave1_Click(sender As Object, e As EventArgs) Handles BtnSave1.Click
+        getCourseCode1()
+    End Sub
 
-    'Private Sub getCourseCode1()
-    '    myConnection.Open()
-    '    Dim str As String
-    '    str = "SELECT * FROM courses WHERE (CourseTitle= '" & CmbCourses1.SelectedItem & "' AND SemesterOffered = '" & PickSemCreate.semester & "')"
-    '    Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
-    '    dr = cmd.ExecuteReader
-    '    Dim codeFound As Boolean = False
+    Private Sub getCourseCode1()
+        myConnection.Open()
+        Dim str As String
+        str = "Select * from courses where (CourseTitle= '" & CmbCourses1.SelectedItem & "' and SemesterOffered = '" & PickSemCreate.semester & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
 
-    '    While dr.Read()
-    '        codeFound = True
-    '        courseCode = dr("CourseCode").ToString
-    '        credits = dr("Credits").ToString
-    '    End While
+        While dr.Read()
+            codefound = True
+            courseCode = dr("CourseCode").ToString
+            credits = dr("Credits").ToString
+        End While
 
-    '    If codeFound = False Then
-    '        MsgBox("Sorry, course was not found", MsgBoxStyle.OkOnly, "Not Found")
-    '    End If
-    '    myConnection.Close()
-    '    Save1(courseCode, credits)
+        If codefound = False Then
+            MsgBox("sorry, course was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+        myConnection.Close()
+        Save1(courseCode, credits)
+
+    End Sub
+
+    Private Sub Save1(courseCode As String, credits As Integer)
+        myConnection.Open()
+        Dim sqlCheck As New OleDbCommand("SELECT count(*) FROM timetable WHERE CourseCode = '" & courseCode & "' AND [Semester] = '" & PickSemCreate.semester & "'", myConnection)
+        sqlCheck.Parameters.AddWithValue("CourseCode", courseCode)
+        sqlCheck.Parameters.AddWithValue("Semester", PickSemCreate.semester)
+
+        dr = sqlCheck.ExecuteReader()
+        If dr.HasRows = True Then
+            dr.Read()
+            If dr.Item(0) = 0 Then 'Course can be added
+                Dim str As String
+                str = "insert into timetable ([CourseCode], [CourseTitle],[Credits], [Days], [Time],[Lab], [Lecturer], [Semester])
+               values (?, ?, ?, ?, ?, ?, ?, ?)"
+                Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+                cmd.Parameters.Add(New OleDbParameter("CourseCode", CType(courseCode, String)))
+                cmd.Parameters.Add(New OleDbParameter("CourseTitle", CType(CmbCourses1.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Credits", CType(credits, String)))
+                cmd.Parameters.Add(New OleDbParameter("Days", CType(days, String)))
+                cmd.Parameters.Add(New OleDbParameter("Time", CType(CmbTimes.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lab", CType(CmbLabs1.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(CmbLecturers1.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Semester", CType(PickSemCreate.semester, String)))
+
+                Try
+                    cmd.ExecuteNonQuery()
+                    cmd.Dispose()
+                    myConnection.Close()
+                    MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                Catch ex As Exception
+                    MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
+                    myConnection.Close()
+                End Try
+            Else
+                MsgBox("The course was already added.", MsgBoxStyle.OkOnly, "Already Added")
+                myConnection.Close()
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnSave2_Click(sender As Object, e As EventArgs) Handles BtnSave2.Click
+        getCourseCode2()
+    End Sub
+
+    Private Sub getCourseCode2()
+        myConnection.Open()
+        Dim str As String
+        str = "Select * from courses where (CourseTitle= '" & CmbCourses2.SelectedItem & "' and SemesterOffered = '" & PickSemCreate.semester & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            courseCode = dr("CourseCode").ToString
+            credits = dr("Credits").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, course was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+        myConnection.Close()
+        Save2(courseCode, credits)
+    End Sub
+
+    Private Sub Save2(courseCode As String, credits As Integer)
+        myConnection.Open()
+        Dim sqlCheck As New OleDbCommand("SELECT count(*) FROM timetable WHERE CourseCode = '" & courseCode & "' AND [Semester] = '" & PickSemCreate.semester & "'", myConnection)
+        sqlCheck.Parameters.AddWithValue("CourseCode", courseCode)
+        sqlCheck.Parameters.AddWithValue("Semester", PickSemCreate.semester)
+
+        dr = sqlCheck.ExecuteReader()
+        If dr.HasRows = True Then
+            dr.Read()
+            If dr.Item(0) = 0 Then 'Course can be added
+                Dim str As String
+                str = "insert into timetable ([CourseCode], [CourseTitle],[Credits], [Days], [Time],[Lab], [Lecturer], [Semester])
+               values (?, ?, ?, ?, ?, ?, ?, ?)"
+                Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+                cmd.Parameters.Add(New OleDbParameter("CourseCode", CType(courseCode, String)))
+                cmd.Parameters.Add(New OleDbParameter("CourseTitle", CType(CmbCourses2.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Credits", CType(credits, String)))
+                cmd.Parameters.Add(New OleDbParameter("Days", CType(days, String)))
+                cmd.Parameters.Add(New OleDbParameter("Time", CType(CmbTimes.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lab", CType(CmbLabs2.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(CmbLecturers2.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Semester", CType(PickSemCreate.semester, String)))
+
+                Try
+                    cmd.ExecuteNonQuery()
+                    cmd.Dispose()
+                    myConnection.Close()
+                    MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                Catch ex As Exception
+                    MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
+                    myConnection.Close()
+                End Try
+            Else
+                MsgBox("The course was already added.", MsgBoxStyle.OkOnly, "Already Added")
+                myConnection.Close()
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnSave3_Click(sender As Object, e As EventArgs) Handles BtnSave3.Click
+        getCourseCode3()
+    End Sub
+
+    Private Sub getCourseCode3()
+        myConnection.Open()
+        Dim str As String
+        str = "Select * from courses where (CourseTitle= '" & CmbCourses3.SelectedItem & "' and SemesterOffered = '" & PickSemCreate.semester & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            courseCode = dr("CourseCode").ToString
+            credits = dr("Credits").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, course was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+        myConnection.Close()
+        Save3(courseCode, credits)
+    End Sub
+
+    Private Sub Save3(courseCode As String, credits As Integer)
+        myConnection.Open()
+        Dim sqlCheck As New OleDbCommand("SELECT count(*) FROM timetable WHERE CourseCode = '" & courseCode & "' AND [Semester] = '" & PickSemCreate.semester & "'", myConnection)
+        sqlCheck.Parameters.AddWithValue("CourseCode", courseCode)
+        sqlCheck.Parameters.AddWithValue("Semester", PickSemCreate.semester)
+
+        dr = sqlCheck.ExecuteReader()
+        If dr.HasRows = True Then
+            dr.Read()
+            If dr.Item(0) = 0 Then 'Course can be added
+                Dim str As String
+                str = "insert into timetable ([CourseCode], [CourseTitle],[Credits], [Days], [Time],[Lab], [Lecturer], [Semester])
+               values (?, ?, ?, ?, ?, ?, ?, ?)"
+                Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+                cmd.Parameters.Add(New OleDbParameter("CourseCode", CType(courseCode, String)))
+                cmd.Parameters.Add(New OleDbParameter("CourseTitle", CType(CmbCourses3.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Credits", CType(credits, String)))
+                cmd.Parameters.Add(New OleDbParameter("Days", CType(days, String)))
+                cmd.Parameters.Add(New OleDbParameter("Time", CType(CmbTimes.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lab", CType(CmbLabs3.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(CmbLecturers3.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Semester", CType(PickSemCreate.semester, String)))
+
+                Try
+                    cmd.ExecuteNonQuery()
+                    cmd.Dispose()
+                    myConnection.Close()
+                    MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                Catch ex As Exception
+                    MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
+                    myConnection.Close()
+                End Try
+            Else
+                myConnection.Close()
+                MsgBox("The course was already added.", MsgBoxStyle.OkOnly, "Already Added")
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnSave4_Click(sender As Object, e As EventArgs) Handles BtnSave4.Click
+        getCourseCode4()
+    End Sub
+
+    Private Sub getCourseCode4()
+        myConnection.Open()
+        Dim str As String
+        str = "Select * from courses where (CourseTitle= '" & CmbCourses4.SelectedItem & "' and SemesterOffered = '" & PickSemCreate.semester & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            courseCode = dr("CourseCode").ToString
+            credits = dr("Credits").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, course was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+        myConnection.Close()
+        Save4(courseCode, credits)
+    End Sub
+
+    Private Sub Save4(courseCode As String, credits As Integer)
+        myConnection.Open()
+        Dim sqlCheck As New OleDbCommand("SELECT count(*) FROM timetable WHERE CourseCode = '" & courseCode & "' AND [Semester] = '" & PickSemCreate.semester & "'", myConnection)
+        sqlCheck.Parameters.AddWithValue("CourseCode", courseCode)
+        sqlCheck.Parameters.AddWithValue("Semester", PickSemCreate.semester)
+
+        dr = sqlCheck.ExecuteReader()
+        If dr.HasRows = True Then
+            dr.Read()
+            If dr.Item(0) = 0 Then 'Course can be added
+                Dim str As String
+                str = "insert into timetable ([CourseCode], [CourseTitle],[Credits], [Days], [Time],[Lab], [Lecturer], [Semester])
+               values (?, ?, ?, ?, ?, ?, ?, ?)"
+                Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+                cmd.Parameters.Add(New OleDbParameter("CourseCode", CType(courseCode, String)))
+                cmd.Parameters.Add(New OleDbParameter("CourseTitle", CType(CmbCourses4.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Credits", CType(credits, String)))
+                cmd.Parameters.Add(New OleDbParameter("Days", CType(days, String)))
+                cmd.Parameters.Add(New OleDbParameter("Time", CType(CmbTimes.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lab", CType(CmbLabs4.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(CmbLecturers4.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Semester", CType(PickSemCreate.semester, String)))
+
+                Try
+                    cmd.ExecuteNonQuery()
+                    cmd.Dispose()
+                    myConnection.Close()
+                    MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                Catch ex As Exception
+                    MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
+                    myConnection.Close()
+                End Try
+            Else
+                MsgBox("The course was already added.", MsgBoxStyle.OkOnly, "Already Added")
+                myConnection.Close()
+            End If
+        End If
+    End Sub
 
 
-    'End Sub
-    'Private Sub Save1(courseCode As String, credits As Integer)
-
-    '    myConnection.Open()
-    '    Dim sqlCheck As New OleDbCommand("SELECT count(*) FROM timetable WHERE CourseTitle = '" & CmbCourses1.SelectedItem & "' AND [SemesterOffered] = '" & PickSemCreate.semester & "'", myConnection)
-    '    sqlCheck.Parameters.AddWithValue("CourseCode", CmbCourses1.SelectedItem)
-    '    sqlCheck.Parameters.AddWithValue("SemesterOffered", PickSemCreate.semester)
+    Private Sub LblBack_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblBack.LinkClicked
+        Hide()
+        PickSemCreate.Show()
+    End Sub
 
 
-    '    dr = sqlCheck.ExecuteReader()
-    '    If dr.HasRows = True Then
-    '        dr.Read()
-    '        If dr.Item(0) = 0 Then 'Course can be added
+    Private Sub LblNext_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblNext.LinkClicked
+        Hide()
+        Dim MyForm As New ViewTimetableCreate
+        MyForm.Show()
 
-    '            Dim str As String
-    '            str = "insert into timetable ([CourseCode], [CourseTitle],[Credits], [Days], [Time],Lab], [Lecturer], [Semester])
-    '           values (?, ?, ?, ?, ?, ?, ?, ?)"
-    '            Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
-    '            cmd.Parameters.Add(New OleDbParameter("CourseCode", CType(courseCode, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("CourseTitle", CType(CmbCourses1.Text, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("Credits", credits))
-    '            cmd.Parameters.Add(New OleDbParameter("Days", CType(days, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("Time", CType(CmbTimes.Text, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("Lab", CType(CmbLabs1.Text, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(CmbLecturers1.Text, String)))
-    '            cmd.Parameters.Add(New OleDbParameter("Semester", CType(PickSemCreate.semester, String)))
-
-    '            Try
-    '                cmd.ExecuteNonQuery()
-    '                cmd.Dispose()
-    '                myConnection.Close()
-    '                MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
-    '            Catch ex As Exception
-    '                myConnection.Close()
-    '                MsgBox("Sorry the course was not successfully added.", MsgBoxStyle.OkOnly, "Error")
-    '            End Try
-
-    '        Else
-    '            myConnection.Close()
-    '            MsgBox("The course was already added.", MsgBoxStyle.OkOnly, "Already Added")
-
-    '        End If
-    '    End If
-
-    '    CmbCourses1.SelectedIndex = -1
-    '    CmbLecturers1.SelectedIndex = -1
-    '    CmbLabs1.SelectedIndex = -1
-
-
-
-    'End Sub
+    End Sub
 End Class
