@@ -15,6 +15,9 @@ Public Class CreateTimetable
     Dim labs(4) As String
     Dim courseCode As String
     Dim credits As Integer
+    Dim creditHrs As Integer
+    Dim Fname As String
+    Dim Lname As String
 
 
     Private Sub CreateTimetable_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -786,6 +789,7 @@ Public Class CreateTimetable
                     cmd.Dispose()
                     myConnection.Close()
                     MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                    retrieveLecturer1(credits)
                 Catch ex As Exception
                     MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
                     myConnection.Close()
@@ -795,8 +799,61 @@ Public Class CreateTimetable
                 myConnection.Close()
             End If
         End If
+
     End Sub
 
+    Private Sub retrieveLecturer1(credits As Integer)
+        Dim str As String
+        Dim strArr() As String
+
+        str = CmbLecturers1.SelectedItem
+        strArr = str.Split(" ")
+
+        Fname = strArr(0)
+        Lname = strArr(1)
+
+        myConnection.Open()
+        Dim str2 As String
+        str2 = "Select * from lecturers where (Fname= '" & Fname & "' and Lname = '" & Lname & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str2, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            creditHrs = dr("UsedCreditHrs").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, lecturer was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+
+        myConnection.Close()
+        updateCreditHrs(creditHrs, credits, Fname, Lname)
+
+
+    End Sub
+
+    Private Sub updateCreditHrs(creditHrs As Integer, credits As Integer, Fname As String, Lname As String)
+
+        creditHrs = creditHrs + credits
+
+        myConnection.Open()
+        Dim str As String
+        str = "update [lecturers] set [UsedCreditHrs]='" & creditHrs & "'Where [Fname] = '" & Fname & "' AND [Lname]= '" & Lname & "' "
+        Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+
+        Try
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            myConnection.Close()
+            MsgBox("Lecturer credit hours has been updated", MsgBoxStyle.OkOnly, "Success!")
+
+        Catch ex As Exception
+            myConnection.Close()
+            MsgBox("Sorry, lecturer credit hours could not be updated", MsgBoxStyle.OkOnly, "Error")
+        End Try
+    End Sub
     Private Sub BtnSave2_Click(sender As Object, e As EventArgs) Handles BtnSave2.Click
         getCourseCode2()
     End Sub
@@ -850,6 +907,7 @@ Public Class CreateTimetable
                     cmd.Dispose()
                     myConnection.Close()
                     MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                    retrieveLecturer2(credits)
                 Catch ex As Exception
                     MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
                     myConnection.Close()
@@ -860,6 +918,40 @@ Public Class CreateTimetable
             End If
         End If
     End Sub
+
+    Private Sub retrieveLecturer2(credits As Integer)
+        Dim str As String
+        Dim strArr() As String
+
+        str = CmbLecturers2.SelectedItem
+        strArr = str.Split(" ")
+
+        Fname = strArr(0)
+        Lname = strArr(1)
+
+        myConnection.Open()
+        Dim str2 As String
+        str2 = "Select * from lecturers where (Fname= '" & Fname & "' and Lname = '" & Lname & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str2, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            creditHrs = dr("UsedCreditHrs").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, lecturer was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+
+        myConnection.Close()
+        updateCreditHrs(creditHrs, credits, Fname, Lname)
+
+
+    End Sub
+
+
 
     Private Sub BtnSave3_Click(sender As Object, e As EventArgs) Handles BtnSave3.Click
         getCourseCode3()
@@ -914,6 +1006,7 @@ Public Class CreateTimetable
                     cmd.Dispose()
                     myConnection.Close()
                     MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                    retrieveLecturer3(credits)
                 Catch ex As Exception
                     MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
                     myConnection.Close()
@@ -924,6 +1017,39 @@ Public Class CreateTimetable
             End If
         End If
     End Sub
+
+    Private Sub retrieveLecturer3(credits As Integer)
+        Dim str As String
+        Dim strArr() As String
+
+        str = CmbLecturers3.SelectedItem
+        strArr = str.Split(" ")
+
+        Fname = strArr(0)
+        Lname = strArr(1)
+
+        myConnection.Open()
+        Dim str2 As String
+        str2 = "Select * from lecturers where (Fname= '" & Fname & "' and Lname = '" & Lname & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str2, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            creditHrs = dr("UsedCreditHrs").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, lecturer was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+
+        myConnection.Close()
+        updateCreditHrs(creditHrs, credits, Fname, Lname)
+
+    End Sub
+
+
 
     Private Sub BtnSave4_Click(sender As Object, e As EventArgs) Handles BtnSave4.Click
         getCourseCode4()
@@ -978,6 +1104,7 @@ Public Class CreateTimetable
                     cmd.Dispose()
                     myConnection.Close()
                     MsgBox("The course was successfully added.", MsgBoxStyle.OkOnly, "Success!")
+                    retrieveLecturer4(credits)
                 Catch ex As Exception
                     MsgBox("Sorry, the course could not be added.", MsgBoxStyle.OkOnly, "Success!")
                     myConnection.Close()
@@ -987,6 +1114,37 @@ Public Class CreateTimetable
                 myConnection.Close()
             End If
         End If
+    End Sub
+
+    Private Sub retrieveLecturer4(credits As Integer)
+        Dim str As String
+        Dim strArr() As String
+
+        str = CmbLecturers4.SelectedItem
+        strArr = str.Split(" ")
+
+        Fname = strArr(0)
+        Lname = strArr(1)
+
+        myConnection.Open()
+        Dim str2 As String
+        str2 = "Select * from lecturers where (Fname= '" & Fname & "' and Lname = '" & Lname & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(str2, myConnection)
+        dr = cmd.ExecuteReader
+        Dim codefound As Boolean = False
+
+        While dr.Read()
+            codefound = True
+            creditHrs = dr("UsedCreditHrs").ToString
+        End While
+
+        If codefound = False Then
+            MsgBox("sorry, lecturer was not found", MsgBoxStyle.OkOnly, "not found")
+        End If
+
+        myConnection.Close()
+        updateCreditHrs(creditHrs, credits, Fname, Lname)
+
     End Sub
 
 
