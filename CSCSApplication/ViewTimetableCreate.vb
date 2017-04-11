@@ -40,4 +40,9 @@ Public Class ViewTimetableCreate
         Dim MyForm As New CreateTimetable
         MyForm.Show()
     End Sub
+
+    Private Sub LblHome_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome.LinkClicked
+        Hide()
+        Main.Show()
+    End Sub
 End Class

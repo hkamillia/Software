@@ -29,6 +29,7 @@ Partial Class ViewTimetableCreate
         Me.LblCreateTimetable = New System.Windows.Forms.Label()
         Me.DgdTimetable = New System.Windows.Forms.DataGridView()
         Me.LblBack = New System.Windows.Forms.LinkLabel()
+        Me.LblHome = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -92,11 +93,15 @@ Partial Class ViewTimetableCreate
         '
         'DgdTimetable
         '
+        Me.DgdTimetable.AllowUserToAddRows = False
+        Me.DgdTimetable.AllowUserToDeleteRows = False
+        Me.DgdTimetable.AllowUserToOrderColumns = True
         Me.DgdTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgdTimetable.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DgdTimetable.Location = New System.Drawing.Point(132, 92)
+        Me.DgdTimetable.Location = New System.Drawing.Point(164, 92)
         Me.DgdTimetable.Name = "DgdTimetable"
-        Me.DgdTimetable.Size = New System.Drawing.Size(645, 392)
+        Me.DgdTimetable.ReadOnly = True
+        Me.DgdTimetable.Size = New System.Drawing.Size(613, 392)
         Me.DgdTimetable.TabIndex = 7
         '
         'LblBack
@@ -112,12 +117,26 @@ Partial Class ViewTimetableCreate
         Me.LblBack.TabStop = True
         Me.LblBack.Text = "<<Back"
         '
+        'LblHome
+        '
+        Me.LblHome.AutoSize = True
+        Me.LblHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome.Location = New System.Drawing.Point(12, 446)
+        Me.LblHome.Name = "LblHome"
+        Me.LblHome.Size = New System.Drawing.Size(141, 20)
+        Me.LblHome.TabIndex = 29
+        Me.LblHome.TabStop = True
+        Me.LblHome.Text = "<<Return to Home"
+        '
         'ViewTimetableCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(777, 484)
+        Me.Controls.Add(Me.LblHome)
         Me.Controls.Add(Me.LblBack)
         Me.Controls.Add(Me.DgdTimetable)
         Me.Controls.Add(Me.Panel2)
@@ -142,4 +161,5 @@ Partial Class ViewTimetableCreate
     Friend WithEvents LblCreateTimetable As Label
     Friend WithEvents DgdTimetable As DataGridView
     Friend WithEvents LblBack As LinkLabel
+    Friend WithEvents LblHome As LinkLabel
 End Class

@@ -22,6 +22,8 @@ Public Class Lecturers
         TabLecturers.SelectedIndex = 0
         LoadData()
         LoadData2()
+        LoadData3()
+        LoadData4()
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
@@ -72,6 +74,7 @@ Public Class Lecturers
 
         LoadData()
         LoadData2()
+        LoadData3()
 
     End Sub
 
@@ -100,6 +103,32 @@ Public Class Lecturers
         Dim view As New DataView(tables(0))
         source1.DataSource = view
         Me.DgdLecturers2.DataSource = view
+        myConnection.Close()
+    End Sub
+
+    Private Sub LoadData3()
+        'Reads from database and fills data grid view
+        myConnection.Open()
+        ds = New DataSet
+        tables = ds.Tables
+        da = New OleDbDataAdapter("Select LecturerID, Fname, Lname, UsedCreditHrs, TimeAvailable from [lecturers]", myConnection)
+        da.Fill(ds, "lecturers")
+        Dim view As New DataView(tables(0))
+        source1.DataSource = view
+        Me.DgdLecturers3.DataSource = view
+        myConnection.Close()
+    End Sub
+
+    Private Sub LoadData4()
+        'Reads from database and fills data grid view
+        myConnection.Open()
+        ds = New DataSet
+        tables = ds.Tables
+        da = New OleDbDataAdapter("Select LecturerID, Fname, Lname, UsedCreditHrs, TimeAvailable from [lecturers]", myConnection)
+        da.Fill(ds, "lecturers")
+        Dim view As New DataView(tables(0))
+        source1.DataSource = view
+        Me.DgdLecturers4.DataSource = view
         myConnection.Close()
     End Sub
 
@@ -158,6 +187,52 @@ Public Class Lecturers
         CmbTimes2.SelectedIndex = -1
 
         LoadData2()
+        LoadData3()
         LoadData()
+    End Sub
+
+    Private Sub LblHome1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome1.LinkClicked
+        Hide()
+        Main.Show()
+    End Sub
+
+    Private Sub LblHome2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome2.LinkClicked
+        Hide()
+        Main.Show()
+    End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        Delete()
+    End Sub
+
+    Private Sub Delete()
+        If DgdLecturers4.Rows.Count > 0 Then
+            If DgdLecturers4.SelectedRows.Count > 0 Then
+                Dim LecturerID As String = DgdLecturers4.SelectedRows(0).Cells("LecturerID").Value
+
+                Dim okToDelete As MsgBoxResult = MsgBox("Are you sure you want to delete the current record?", MsgBoxStyle.YesNo)
+                If okToDelete = MsgBoxResult.Yes Then
+                    myConnection.Open()
+                    Dim str As String
+                    str = "Delete from lecturers Where [LecturerID]= '" & LecturerID & "'"
+                    Dim cmd As OleDbCommand = New OleDbCommand(str, myConnection)
+                    Try
+                        cmd.ExecuteNonQuery()
+                        cmd.Dispose()
+                        myConnection.Close()
+                        MsgBox("The lecturer was successfully deleted.", MsgBoxStyle.OkOnly, "Success!")
+                        LoadData4()
+                        LoadData3()
+                        LoadData2()
+                        LoadData()
+                    Catch ex As Exception
+                        MsgBox("Sorry the lecturer was not successfully deleted.", MsgBoxStyle.OkOnly, "Error")
+                        myConnection.Close()
+                    End Try
+                ElseIf okToDelete = MsgBoxResult.No Then
+                    Exit Sub
+                End If
+            End If
+        End If
     End Sub
 End Class

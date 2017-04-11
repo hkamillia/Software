@@ -273,7 +273,7 @@ Public Class PickSemCreate
         MyForm.Show()
     End Sub
 
-    Private Sub LblBack_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblBack.LinkClicked
+    Private Sub LblHome_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome.LinkClicked
         Hide()
         Main.Show()
     End Sub

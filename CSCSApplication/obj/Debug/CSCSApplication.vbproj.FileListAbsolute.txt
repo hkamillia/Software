@@ -43,3 +43,4 @@ C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplicatio
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.CreateTimetable.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.Lecturers.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.ViewTimetableCreate.resources
+C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.UpdateTimetable.resources

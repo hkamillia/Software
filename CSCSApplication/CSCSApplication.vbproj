@@ -124,6 +124,12 @@
     <Compile Include="Splash_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateTimetable.Designer.vb">
+      <DependentUpon>UpdateTimetable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTimetable.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ViewTimetableCreate.Designer.vb">
       <DependentUpon>ViewTimetableCreate.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_Screen.resx">
       <DependentUpon>Splash_Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTimetable.resx">
+      <DependentUpon>UpdateTimetable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewTimetableCreate.resx">
       <DependentUpon>ViewTimetableCreate.vb</DependentUpon>

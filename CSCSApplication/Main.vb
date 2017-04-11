@@ -8,4 +8,9 @@
         Hide()
         Lecturers.Show()
     End Sub
+
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        Hide()
+        UpdateTimetable.Show()
+    End Sub
 End Class

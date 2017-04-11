@@ -24,6 +24,7 @@ Partial Class PickSemCreate
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnSemester1 = New System.Windows.Forms.RadioButton()
         Me.BtnSemester2 = New System.Windows.Forms.RadioButton()
         Me.BtnSemester3 = New System.Windows.Forms.RadioButton()
@@ -40,15 +41,14 @@ Partial Class PickSemCreate
         Me.LblInstructions = New System.Windows.Forms.Label()
         Me.LblDelete = New System.Windows.Forms.Label()
         Me.LblNext = New System.Windows.Forms.LinkLabel()
-        Me.LblBack = New System.Windows.Forms.LinkLabel()
+        Me.LblHome = New System.Windows.Forms.LinkLabel()
         Me.LblCredits = New System.Windows.Forms.Label()
         Me.TxtCredits = New System.Windows.Forms.TextBox()
         Me.TxtClassSize = New System.Windows.Forms.TextBox()
         Me.LblClassSize = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -72,6 +72,16 @@ Partial Class PickSemCreate
         Me.Label1.Size = New System.Drawing.Size(375, 28)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Computer Science Course Scheduler"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'BtnSemester1
         '
@@ -187,9 +197,10 @@ Partial Class PickSemCreate
         Me.Panel2.Controls.Add(Me.BtnSemester1)
         Me.Panel2.Controls.Add(Me.BtnSemester2)
         Me.Panel2.Controls.Add(Me.BtnSemester3)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 49)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 437)
+        Me.Panel2.Size = New System.Drawing.Size(200, 435)
         Me.Panel2.TabIndex = 22
         '
         'LblInstructions
@@ -223,18 +234,18 @@ Partial Class PickSemCreate
         Me.LblNext.TabStop = True
         Me.LblNext.Text = "Next>>"
         '
-        'LblBack
+        'LblHome
         '
-        Me.LblBack.AutoSize = True
-        Me.LblBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBack.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LblBack.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblBack.Location = New System.Drawing.Point(404, 413)
-        Me.LblBack.Name = "LblBack"
-        Me.LblBack.Size = New System.Drawing.Size(63, 20)
-        Me.LblBack.TabIndex = 2
-        Me.LblBack.TabStop = True
-        Me.LblBack.Text = "<<Back"
+        Me.LblHome.AutoSize = True
+        Me.LblHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome.Location = New System.Drawing.Point(337, 413)
+        Me.LblHome.Name = "LblHome"
+        Me.LblHome.Size = New System.Drawing.Size(141, 20)
+        Me.LblHome.TabIndex = 2
+        Me.LblHome.TabStop = True
+        Me.LblHome.Text = "<<Return to Home"
         '
         'LblCredits
         '
@@ -268,16 +279,6 @@ Partial Class PickSemCreate
         Me.LblClassSize.TabIndex = 28
         Me.LblClassSize.Text = "Maximum Class Size:"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'PickSemCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -288,7 +289,7 @@ Partial Class PickSemCreate
         Me.Controls.Add(Me.TxtClassSize)
         Me.Controls.Add(Me.TxtCredits)
         Me.Controls.Add(Me.LblCredits)
-        Me.Controls.Add(Me.LblBack)
+        Me.Controls.Add(Me.LblHome)
         Me.Controls.Add(Me.LblNext)
         Me.Controls.Add(Me.LblDelete)
         Me.Controls.Add(Me.Panel2)
@@ -306,9 +307,9 @@ Partial Class PickSemCreate
         Me.Text = "Pick a Semester"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -333,7 +334,7 @@ Partial Class PickSemCreate
     Friend WithEvents LblInstructions As Label
     Friend WithEvents LblDelete As Label
     Friend WithEvents LblNext As LinkLabel
-    Friend WithEvents LblBack As LinkLabel
+    Friend WithEvents LblHome As LinkLabel
     Friend WithEvents LblCredits As Label
     Friend WithEvents TxtCredits As TextBox
     Friend WithEvents TxtClassSize As TextBox

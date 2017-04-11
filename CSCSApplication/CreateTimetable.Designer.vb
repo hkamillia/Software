@@ -24,7 +24,6 @@ Partial Class CreateTimetable
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblCSCS = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblCreateTimetable = New System.Windows.Forms.Label()
         Me.BtnMW = New System.Windows.Forms.RadioButton()
@@ -57,11 +56,11 @@ Partial Class CreateTimetable
         Me.BtnSave3 = New System.Windows.Forms.Button()
         Me.BtnSave4 = New System.Windows.Forms.Button()
         Me.LblNext = New System.Windows.Forms.LinkLabel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LblHome = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -85,16 +84,6 @@ Partial Class CreateTimetable
         Me.LblCSCS.Size = New System.Drawing.Size(375, 28)
         Me.LblCSCS.TabIndex = 1
         Me.LblCSCS.Text = "Computer Science Course Scheduler"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Panel2
         '
@@ -308,7 +297,7 @@ Partial Class CreateTimetable
         Me.LblBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBack.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LblBack.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblBack.Location = New System.Drawing.Point(90, 387)
+        Me.LblBack.Location = New System.Drawing.Point(381, 377)
         Me.LblBack.Name = "LblBack"
         Me.LblBack.Size = New System.Drawing.Size(63, 20)
         Me.LblBack.TabIndex = 27
@@ -394,26 +383,35 @@ Partial Class CreateTimetable
         Me.LblNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNext.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LblNext.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblNext.Location = New System.Drawing.Point(188, 387)
+        Me.LblNext.Location = New System.Drawing.Point(521, 377)
         Me.LblNext.Name = "LblNext"
         Me.LblNext.Size = New System.Drawing.Size(59, 20)
         Me.LblNext.TabIndex = 36
         Me.LblNext.TabStop = True
         Me.LblNext.Text = "Next>>"
         '
-        'TextBox1
+        'PictureBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(337, 412)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 37
+        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
-        'TextBox2
+        'LblHome
         '
-        Me.TextBox2.Location = New System.Drawing.Point(457, 412)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 38
+        Me.LblHome.AutoSize = True
+        Me.LblHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome.Location = New System.Drawing.Point(24, 438)
+        Me.LblHome.Name = "LblHome"
+        Me.LblHome.Size = New System.Drawing.Size(141, 20)
+        Me.LblHome.TabIndex = 37
+        Me.LblHome.TabStop = True
+        Me.LblHome.Text = "<<Return to Home"
         '
         'CreateTimetable
         '
@@ -421,8 +419,7 @@ Partial Class CreateTimetable
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(862, 484)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.LblHome)
         Me.Controls.Add(Me.LblNext)
         Me.Controls.Add(Me.BtnSave4)
         Me.Controls.Add(Me.BtnSave3)
@@ -459,9 +456,9 @@ Partial Class CreateTimetable
         Me.Text = "Create Timetable"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -502,6 +499,5 @@ Partial Class CreateTimetable
     Friend WithEvents BtnSave3 As Button
     Friend WithEvents BtnSave4 As Button
     Friend WithEvents LblNext As LinkLabel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents LblHome As LinkLabel
 End Class
