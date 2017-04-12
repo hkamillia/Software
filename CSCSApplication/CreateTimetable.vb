@@ -1165,4 +1165,8 @@ Public Class CreateTimetable
         Hide()
         Main.Show()
     End Sub
+
+    Private Sub LblLogout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLogout.LinkClicked
+        Main.Logout()
+    End Sub
 End Class

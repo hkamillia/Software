@@ -22,8 +22,11 @@ Partial Class CreateTimetable
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateTimetable))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblLogout = New System.Windows.Forms.LinkLabel()
         Me.LblCSCS = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblCreateTimetable = New System.Windows.Forms.Label()
         Me.BtnMW = New System.Windows.Forms.RadioButton()
@@ -56,16 +59,16 @@ Partial Class CreateTimetable
         Me.BtnSave3 = New System.Windows.Forms.Button()
         Me.BtnSave4 = New System.Windows.Forms.Button()
         Me.LblNext = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LblHome = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblLogout)
         Me.Panel1.Controls.Add(Me.LblCSCS)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -73,6 +76,20 @@ Partial Class CreateTimetable
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(862, 49)
         Me.Panel1.TabIndex = 4
+        '
+        'LblLogout
+        '
+        Me.LblLogout.ActiveLinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.AutoSize = True
+        Me.LblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblLogout.LinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.Location = New System.Drawing.Point(734, 16)
+        Me.LblLogout.Name = "LblLogout"
+        Me.LblLogout.Size = New System.Drawing.Size(82, 20)
+        Me.LblLogout.TabIndex = 9
+        Me.LblLogout.TabStop = True
+        Me.LblLogout.Text = "LOGOUT"
         '
         'LblCSCS
         '
@@ -84,6 +101,16 @@ Partial Class CreateTimetable
         Me.LblCSCS.Size = New System.Drawing.Size(375, 28)
         Me.LblCSCS.TabIndex = 1
         Me.LblCSCS.Text = "Computer Science Course Scheduler"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Panel2
         '
@@ -390,16 +417,6 @@ Partial Class CreateTimetable
         Me.LblNext.TabStop = True
         Me.LblNext.Text = "Next>>"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CSCSApplication.My.Resources.Resources.light_usc_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(192, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(74, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'LblHome
         '
         Me.LblHome.AutoSize = True
@@ -452,13 +469,14 @@ Partial Class CreateTimetable
         Me.Controls.Add(Me.BtnMW)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateTimetable"
         Me.Text = "Create Timetable"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -500,4 +518,5 @@ Partial Class CreateTimetable
     Friend WithEvents BtnSave4 As Button
     Friend WithEvents LblNext As LinkLabel
     Friend WithEvents LblHome As LinkLabel
+    Friend WithEvents LblLogout As LinkLabel
 End Class

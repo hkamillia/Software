@@ -6,9 +6,7 @@ Public Class Login
     Dim connString As String
     Dim myConnection As OleDbConnection = New OleDbConnection
 
-    Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         Login()

@@ -210,6 +210,21 @@ Public Class UpdateTimetable
 
     End Sub
 
+    Private Sub Code_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtCrsCode.KeyPress
+
+        If Char.IsLower(e.KeyChar) Then
+
+            'Convert to uppercase, and put at the caret position in the TextBox.
+            TxtCrsCode.SelectedText = Char.ToUpper(e.KeyChar)
+
+            e.Handled = True
+        End If
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the BtnSearch_Click Event
+            BtnSearch_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         UpdateCourse()
     End Sub
@@ -372,5 +387,9 @@ Public Class UpdateTimetable
     Private Sub LblHome_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome.LinkClicked
         Hide()
         Main.Show()
+    End Sub
+
+    Private Sub LblLogout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLogout.LinkClicked
+        Main.Logout()
     End Sub
 End Class

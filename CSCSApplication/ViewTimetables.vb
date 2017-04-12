@@ -1,6 +1,5 @@
 ﻿Imports System.Data.OleDb
-Public Class ViewTimetableCreate
-
+Public Class ViewTimetables
     Dim provider As String
     Dim dataFile As String
     Dim connString As String
@@ -10,7 +9,9 @@ Public Class ViewTimetableCreate
     Dim ds As DataSet
     Dim tables As DataTableCollection
     Dim source1 As New BindingSource
-    Private Sub ViewTimetableCreate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public semester As String
+
+    Private Sub ViewTimetables_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadForm()
     End Sub
 
@@ -19,6 +20,20 @@ Public Class ViewTimetableCreate
         dataFile = "|DataDirectory|\Database\CSCSdb.mdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
+    End Sub
+
+    Private Sub BtnSemester1_CheckedChanged(sender As Object, e As EventArgs) Handles BtnSemester1.CheckedChanged
+        semester = "1st"
+        LoadData()
+    End Sub
+
+    Private Sub BtnSemester2_CheckedChanged(sender As Object, e As EventArgs) Handles BtnSemester2.CheckedChanged
+        semester = "2nd"
+        LoadData()
+    End Sub
+
+    Private Sub BtnSemester3_CheckedChanged(sender As Object, e As EventArgs) Handles BtnSemester3.CheckedChanged
+        semester = "3rd"
         LoadData()
     End Sub
 
@@ -27,23 +42,12 @@ Public Class ViewTimetableCreate
         myConnection.Open()
         ds = New DataSet
         tables = ds.Tables
-        da = New OleDbDataAdapter("Select CourseCode, CourseTitle, Credits, Days, Time, Lab, Lecturer from [timetable] WHERE Semester='" & PickSemCreate.semester & "'", myConnection)
+        da = New OleDbDataAdapter("Select CourseCode, CourseTitle, Credits, Days, Time, Lab, Lecturer from [timetable] WHERE Semester='" & semester & "'", myConnection)
         da.Fill(ds, "timetable")
         Dim view As New DataView(tables(0))
         source1.DataSource = view
         Me.DgdTimetable.DataSource = view
         myConnection.Close()
-    End Sub
-
-    Private Sub LblBack_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblBack.LinkClicked
-        Hide()
-        Dim MyForm As New CreateTimetable
-        MyForm.Show()
-    End Sub
-
-    Private Sub LblHome_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome.LinkClicked
-        Hide()
-        Main.Show()
     End Sub
 
     Private Sub LblLogout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLogout.LinkClicked

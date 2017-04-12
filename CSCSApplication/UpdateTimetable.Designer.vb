@@ -22,7 +22,9 @@ Partial Class UpdateTimetable
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateTimetable))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblLogout = New System.Windows.Forms.LinkLabel()
         Me.LblCSCS = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -60,6 +62,7 @@ Partial Class UpdateTimetable
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblLogout)
         Me.Panel1.Controls.Add(Me.LblCSCS)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -67,6 +70,20 @@ Partial Class UpdateTimetable
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(862, 49)
         Me.Panel1.TabIndex = 5
+        '
+        'LblLogout
+        '
+        Me.LblLogout.ActiveLinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.AutoSize = True
+        Me.LblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblLogout.LinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.Location = New System.Drawing.Point(749, 16)
+        Me.LblLogout.Name = "LblLogout"
+        Me.LblLogout.Size = New System.Drawing.Size(82, 20)
+        Me.LblLogout.TabIndex = 9
+        Me.LblLogout.TabStop = True
+        Me.LblLogout.Text = "LOGOUT"
         '
         'LblCSCS
         '
@@ -360,6 +377,7 @@ Partial Class UpdateTimetable
         Me.Controls.Add(Me.BtnSemester1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UpdateTimetable"
         Me.Text = "Update Timetable"
         Me.Panel1.ResumeLayout(False)
@@ -402,4 +420,5 @@ Partial Class UpdateTimetable
     Friend WithEvents LblNewLecturer As Label
     Friend WithEvents BtnUpdateLect As Button
     Friend WithEvents LblHome As LinkLabel
+    Friend WithEvents LblLogout As LinkLabel
 End Class

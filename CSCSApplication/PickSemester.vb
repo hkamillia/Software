@@ -267,6 +267,20 @@ Public Class PickSemCreate
         End If
     End Sub
 
+    Private Sub ClassSize_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtClassSize.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Credits_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtCredits.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+    End Sub
+
     Private Sub LblNext_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblNext.LinkClicked
         Hide()
         Dim MyForm As New CreateTimetable
@@ -276,5 +290,9 @@ Public Class PickSemCreate
     Private Sub LblHome_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblHome.LinkClicked
         Hide()
         Main.Show()
+    End Sub
+
+    Private Sub LblLogout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLogout.LinkClicked
+        Main.Logout()
     End Sub
 End Class

@@ -22,7 +22,9 @@ Partial Class PickSemCreate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PickSemCreate))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblLogout = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnSemester1 = New System.Windows.Forms.RadioButton()
@@ -54,6 +56,7 @@ Partial Class PickSemCreate
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblLogout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -61,6 +64,20 @@ Partial Class PickSemCreate
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(777, 49)
         Me.Panel1.TabIndex = 1
+        '
+        'LblLogout
+        '
+        Me.LblLogout.ActiveLinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.AutoSize = True
+        Me.LblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblLogout.LinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.Location = New System.Drawing.Point(665, 16)
+        Me.LblLogout.Name = "LblLogout"
+        Me.LblLogout.Size = New System.Drawing.Size(82, 20)
+        Me.LblLogout.TabIndex = 9
+        Me.LblLogout.TabStop = True
+        Me.LblLogout.Text = "LOGOUT"
         '
         'Label1
         '
@@ -303,6 +320,7 @@ Partial Class PickSemCreate
         Me.Controls.Add(Me.TxtCrsCode)
         Me.Controls.Add(Me.LsbCourses)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PickSemCreate"
         Me.Text = "Pick a Semester"
         Me.Panel1.ResumeLayout(False)
@@ -339,4 +357,5 @@ Partial Class PickSemCreate
     Friend WithEvents TxtCredits As TextBox
     Friend WithEvents TxtClassSize As TextBox
     Friend WithEvents LblClassSize As Label
+    Friend WithEvents LblLogout As LinkLabel
 End Class

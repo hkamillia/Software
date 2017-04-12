@@ -22,11 +22,14 @@ Partial Class Lecturers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lecturers))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblLogout = New System.Windows.Forms.LinkLabel()
         Me.LblCSCS = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabLecturers = New System.Windows.Forms.TabControl()
         Me.AddLecturer = New System.Windows.Forms.TabPage()
+        Me.LblHome1 = New System.Windows.Forms.LinkLabel()
         Me.LblAllLecturers = New System.Windows.Forms.Label()
         Me.DgdLecturers = New System.Windows.Forms.DataGridView()
         Me.LblTimes = New System.Windows.Forms.Label()
@@ -39,6 +42,9 @@ Partial Class Lecturers
         Me.TxtFname = New System.Windows.Forms.TextBox()
         Me.TxtLecturerID = New System.Windows.Forms.TextBox()
         Me.UpdateLecturer = New System.Windows.Forms.TabPage()
+        Me.BtnReset = New System.Windows.Forms.Button()
+        Me.LblHome2 = New System.Windows.Forms.LinkLabel()
+        Me.LblAllLecturers2 = New System.Windows.Forms.Label()
         Me.BtnSearch = New System.Windows.Forms.Button()
         Me.CmbTimes2 = New System.Windows.Forms.ComboBox()
         Me.LblTimeAvailable = New System.Windows.Forms.Label()
@@ -52,18 +58,18 @@ Partial Class Lecturers
         Me.TxtLecturerID2 = New System.Windows.Forms.TextBox()
         Me.LblLecturerID2 = New System.Windows.Forms.Label()
         Me.DgdLecturers2 = New System.Windows.Forms.DataGridView()
+        Me.ViewLecturers = New System.Windows.Forms.TabPage()
+        Me.LblHome3 = New System.Windows.Forms.LinkLabel()
+        Me.LblAllLecturers3 = New System.Windows.Forms.Label()
+        Me.DgdLecturers3 = New System.Windows.Forms.DataGridView()
+        Me.DeleteLecturer = New System.Windows.Forms.TabPage()
+        Me.LblHome4 = New System.Windows.Forms.LinkLabel()
+        Me.LblAllLecturers4 = New System.Windows.Forms.Label()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.LblDelete = New System.Windows.Forms.Label()
+        Me.DgdLecturers4 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblManage = New System.Windows.Forms.Label()
-        Me.LblAllLecturers2 = New System.Windows.Forms.Label()
-        Me.LblHome2 = New System.Windows.Forms.LinkLabel()
-        Me.LblHome1 = New System.Windows.Forms.LinkLabel()
-        Me.ViewLecturers = New System.Windows.Forms.TabPage()
-        Me.DgdLecturers3 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DeleteLecturer = New System.Windows.Forms.TabPage()
-        Me.DgdLecturers4 = New System.Windows.Forms.DataGridView()
-        Me.LblDelete = New System.Windows.Forms.Label()
-        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabLecturers.SuspendLayout()
@@ -71,16 +77,17 @@ Partial Class Lecturers
         CType(Me.DgdLecturers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UpdateLecturer.SuspendLayout()
         CType(Me.DgdLecturers2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.ViewLecturers.SuspendLayout()
         CType(Me.DgdLecturers3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DeleteLecturer.SuspendLayout()
         CType(Me.DgdLecturers4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblLogout)
         Me.Panel1.Controls.Add(Me.LblCSCS)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -88,6 +95,20 @@ Partial Class Lecturers
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(777, 49)
         Me.Panel1.TabIndex = 2
+        '
+        'LblLogout
+        '
+        Me.LblLogout.ActiveLinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.AutoSize = True
+        Me.LblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblLogout.LinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.Location = New System.Drawing.Point(683, 16)
+        Me.LblLogout.Name = "LblLogout"
+        Me.LblLogout.Size = New System.Drawing.Size(82, 20)
+        Me.LblLogout.TabIndex = 9
+        Me.LblLogout.TabStop = True
+        Me.LblLogout.Text = "LOGOUT"
         '
         'LblCSCS
         '
@@ -143,6 +164,19 @@ Partial Class Lecturers
         Me.AddLecturer.TabIndex = 0
         Me.AddLecturer.Text = "Add Lecturer"
         Me.AddLecturer.UseVisualStyleBackColor = True
+        '
+        'LblHome1
+        '
+        Me.LblHome1.AutoSize = True
+        Me.LblHome1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome1.Location = New System.Drawing.Point(21, 326)
+        Me.LblHome1.Name = "LblHome1"
+        Me.LblHome1.Size = New System.Drawing.Size(132, 18)
+        Me.LblHome1.TabIndex = 29
+        Me.LblHome1.TabStop = True
+        Me.LblHome1.Text = "<<Return to Home"
         '
         'LblAllLecturers
         '
@@ -243,6 +277,7 @@ Partial Class Lecturers
         '
         'UpdateLecturer
         '
+        Me.UpdateLecturer.Controls.Add(Me.BtnReset)
         Me.UpdateLecturer.Controls.Add(Me.LblHome2)
         Me.UpdateLecturer.Controls.Add(Me.LblAllLecturers2)
         Me.UpdateLecturer.Controls.Add(Me.BtnSearch)
@@ -265,6 +300,37 @@ Partial Class Lecturers
         Me.UpdateLecturer.TabIndex = 1
         Me.UpdateLecturer.Text = "Update Lecturer"
         Me.UpdateLecturer.UseVisualStyleBackColor = True
+        '
+        'BtnReset
+        '
+        Me.BtnReset.Location = New System.Drawing.Point(241, 178)
+        Me.BtnReset.Name = "BtnReset"
+        Me.BtnReset.Size = New System.Drawing.Size(75, 23)
+        Me.BtnReset.TabIndex = 29
+        Me.BtnReset.Text = "Reset"
+        Me.BtnReset.UseVisualStyleBackColor = True
+        '
+        'LblHome2
+        '
+        Me.LblHome2.AutoSize = True
+        Me.LblHome2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome2.Location = New System.Drawing.Point(19, 322)
+        Me.LblHome2.Name = "LblHome2"
+        Me.LblHome2.Size = New System.Drawing.Size(132, 18)
+        Me.LblHome2.TabIndex = 28
+        Me.LblHome2.TabStop = True
+        Me.LblHome2.Text = "<<Return to Home"
+        '
+        'LblAllLecturers2
+        '
+        Me.LblAllLecturers2.AutoSize = True
+        Me.LblAllLecturers2.Location = New System.Drawing.Point(482, 18)
+        Me.LblAllLecturers2.Name = "LblAllLecturers2"
+        Me.LblAllLecturers2.Size = New System.Drawing.Size(102, 13)
+        Me.LblAllLecturers2.TabIndex = 24
+        Me.LblAllLecturers2.Text = "All Current Lecturers"
         '
         'BtnSearch
         '
@@ -379,11 +445,125 @@ Partial Class Lecturers
         Me.DgdLecturers2.Size = New System.Drawing.Size(438, 327)
         Me.DgdLecturers2.TabIndex = 11
         '
+        'ViewLecturers
+        '
+        Me.ViewLecturers.Controls.Add(Me.LblHome3)
+        Me.ViewLecturers.Controls.Add(Me.LblAllLecturers3)
+        Me.ViewLecturers.Controls.Add(Me.DgdLecturers3)
+        Me.ViewLecturers.Location = New System.Drawing.Point(4, 22)
+        Me.ViewLecturers.Name = "ViewLecturers"
+        Me.ViewLecturers.Padding = New System.Windows.Forms.Padding(3)
+        Me.ViewLecturers.Size = New System.Drawing.Size(766, 369)
+        Me.ViewLecturers.TabIndex = 2
+        Me.ViewLecturers.Text = "View Lecturers"
+        Me.ViewLecturers.UseVisualStyleBackColor = True
+        '
+        'LblHome3
+        '
+        Me.LblHome3.AutoSize = True
+        Me.LblHome3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome3.Location = New System.Drawing.Point(24, 346)
+        Me.LblHome3.Name = "LblHome3"
+        Me.LblHome3.Size = New System.Drawing.Size(132, 18)
+        Me.LblHome3.TabIndex = 30
+        Me.LblHome3.TabStop = True
+        Me.LblHome3.Text = "<<Return to Home"
+        '
+        'LblAllLecturers3
+        '
+        Me.LblAllLecturers3.AutoSize = True
+        Me.LblAllLecturers3.Location = New System.Drawing.Point(335, 15)
+        Me.LblAllLecturers3.Name = "LblAllLecturers3"
+        Me.LblAllLecturers3.Size = New System.Drawing.Size(102, 13)
+        Me.LblAllLecturers3.TabIndex = 25
+        Me.LblAllLecturers3.Text = "All Current Lecturers"
+        '
+        'DgdLecturers3
+        '
+        Me.DgdLecturers3.AllowUserToAddRows = False
+        Me.DgdLecturers3.AllowUserToDeleteRows = False
+        Me.DgdLecturers3.AllowUserToOrderColumns = True
+        Me.DgdLecturers3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgdLecturers3.Location = New System.Drawing.Point(18, 31)
+        Me.DgdLecturers3.Name = "DgdLecturers3"
+        Me.DgdLecturers3.ReadOnly = True
+        Me.DgdLecturers3.Size = New System.Drawing.Size(731, 299)
+        Me.DgdLecturers3.TabIndex = 0
+        '
+        'DeleteLecturer
+        '
+        Me.DeleteLecturer.Controls.Add(Me.LblHome4)
+        Me.DeleteLecturer.Controls.Add(Me.LblAllLecturers4)
+        Me.DeleteLecturer.Controls.Add(Me.BtnDelete)
+        Me.DeleteLecturer.Controls.Add(Me.LblDelete)
+        Me.DeleteLecturer.Controls.Add(Me.DgdLecturers4)
+        Me.DeleteLecturer.Location = New System.Drawing.Point(4, 22)
+        Me.DeleteLecturer.Name = "DeleteLecturer"
+        Me.DeleteLecturer.Padding = New System.Windows.Forms.Padding(3)
+        Me.DeleteLecturer.Size = New System.Drawing.Size(766, 369)
+        Me.DeleteLecturer.TabIndex = 3
+        Me.DeleteLecturer.Text = "Delete Lecturer"
+        Me.DeleteLecturer.UseVisualStyleBackColor = True
+        '
+        'LblHome4
+        '
+        Me.LblHome4.AutoSize = True
+        Me.LblHome4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHome4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblHome4.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblHome4.Location = New System.Drawing.Point(22, 313)
+        Me.LblHome4.Name = "LblHome4"
+        Me.LblHome4.Size = New System.Drawing.Size(132, 18)
+        Me.LblHome4.TabIndex = 29
+        Me.LblHome4.TabStop = True
+        Me.LblHome4.Text = "<<Return to Home"
+        '
+        'LblAllLecturers4
+        '
+        Me.LblAllLecturers4.AutoSize = True
+        Me.LblAllLecturers4.Location = New System.Drawing.Point(429, 21)
+        Me.LblAllLecturers4.Name = "LblAllLecturers4"
+        Me.LblAllLecturers4.Size = New System.Drawing.Size(102, 13)
+        Me.LblAllLecturers4.TabIndex = 26
+        Me.LblAllLecturers4.Text = "All Current Lecturers"
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Location = New System.Drawing.Point(46, 83)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDelete.TabIndex = 25
+        Me.BtnDelete.Text = "Delete "
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'LblDelete
+        '
+        Me.LblDelete.AutoSize = True
+        Me.LblDelete.Location = New System.Drawing.Point(22, 54)
+        Me.LblDelete.Name = "LblDelete"
+        Me.LblDelete.Size = New System.Drawing.Size(146, 13)
+        Me.LblDelete.TabIndex = 24
+        Me.LblDelete.Text = "Select Row then click delete:"
+        '
+        'DgdLecturers4
+        '
+        Me.DgdLecturers4.AllowUserToAddRows = False
+        Me.DgdLecturers4.AllowUserToDeleteRows = False
+        Me.DgdLecturers4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgdLecturers4.Location = New System.Drawing.Point(195, 37)
+        Me.DgdLecturers4.Name = "DgdLecturers4"
+        Me.DgdLecturers4.ReadOnly = True
+        Me.DgdLecturers4.Size = New System.Drawing.Size(555, 311)
+        Me.DgdLecturers4.TabIndex = 0
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.LblManage)
-        Me.Panel2.Location = New System.Drawing.Point(0, 46)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 49)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(777, 37)
         Me.Panel2.TabIndex = 4
@@ -399,116 +579,6 @@ Partial Class Lecturers
         Me.LblManage.TabIndex = 0
         Me.LblManage.Text = "Manage Lecturers"
         '
-        'LblAllLecturers2
-        '
-        Me.LblAllLecturers2.AutoSize = True
-        Me.LblAllLecturers2.Location = New System.Drawing.Point(482, 18)
-        Me.LblAllLecturers2.Name = "LblAllLecturers2"
-        Me.LblAllLecturers2.Size = New System.Drawing.Size(102, 13)
-        Me.LblAllLecturers2.TabIndex = 24
-        Me.LblAllLecturers2.Text = "All Current Lecturers"
-        '
-        'LblHome2
-        '
-        Me.LblHome2.AutoSize = True
-        Me.LblHome2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHome2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LblHome2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblHome2.Location = New System.Drawing.Point(19, 322)
-        Me.LblHome2.Name = "LblHome2"
-        Me.LblHome2.Size = New System.Drawing.Size(132, 18)
-        Me.LblHome2.TabIndex = 28
-        Me.LblHome2.TabStop = True
-        Me.LblHome2.Text = "<<Return to Home"
-        '
-        'LblHome1
-        '
-        Me.LblHome1.AutoSize = True
-        Me.LblHome1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHome1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LblHome1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblHome1.Location = New System.Drawing.Point(21, 326)
-        Me.LblHome1.Name = "LblHome1"
-        Me.LblHome1.Size = New System.Drawing.Size(132, 18)
-        Me.LblHome1.TabIndex = 29
-        Me.LblHome1.TabStop = True
-        Me.LblHome1.Text = "<<Return to Home"
-        '
-        'ViewLecturers
-        '
-        Me.ViewLecturers.Controls.Add(Me.Label1)
-        Me.ViewLecturers.Controls.Add(Me.DgdLecturers3)
-        Me.ViewLecturers.Location = New System.Drawing.Point(4, 22)
-        Me.ViewLecturers.Name = "ViewLecturers"
-        Me.ViewLecturers.Padding = New System.Windows.Forms.Padding(3)
-        Me.ViewLecturers.Size = New System.Drawing.Size(766, 369)
-        Me.ViewLecturers.TabIndex = 2
-        Me.ViewLecturers.Text = "View Lecturers"
-        Me.ViewLecturers.UseVisualStyleBackColor = True
-        '
-        'DgdLecturers3
-        '
-        Me.DgdLecturers3.AllowUserToAddRows = False
-        Me.DgdLecturers3.AllowUserToDeleteRows = False
-        Me.DgdLecturers3.AllowUserToOrderColumns = True
-        Me.DgdLecturers3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgdLecturers3.Location = New System.Drawing.Point(18, 31)
-        Me.DgdLecturers3.Name = "DgdLecturers3"
-        Me.DgdLecturers3.ReadOnly = True
-        Me.DgdLecturers3.Size = New System.Drawing.Size(731, 318)
-        Me.DgdLecturers3.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(335, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 13)
-        Me.Label1.TabIndex = 25
-        Me.Label1.Text = "All Current Lecturers"
-        '
-        'DeleteLecturer
-        '
-        Me.DeleteLecturer.Controls.Add(Me.BtnDelete)
-        Me.DeleteLecturer.Controls.Add(Me.LblDelete)
-        Me.DeleteLecturer.Controls.Add(Me.DgdLecturers4)
-        Me.DeleteLecturer.Location = New System.Drawing.Point(4, 22)
-        Me.DeleteLecturer.Name = "DeleteLecturer"
-        Me.DeleteLecturer.Padding = New System.Windows.Forms.Padding(3)
-        Me.DeleteLecturer.Size = New System.Drawing.Size(766, 369)
-        Me.DeleteLecturer.TabIndex = 3
-        Me.DeleteLecturer.Text = "Delete Lecturer"
-        Me.DeleteLecturer.UseVisualStyleBackColor = True
-        '
-        'DgdLecturers4
-        '
-        Me.DgdLecturers4.AllowUserToAddRows = False
-        Me.DgdLecturers4.AllowUserToDeleteRows = False
-        Me.DgdLecturers4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgdLecturers4.Location = New System.Drawing.Point(195, 24)
-        Me.DgdLecturers4.Name = "DgdLecturers4"
-        Me.DgdLecturers4.ReadOnly = True
-        Me.DgdLecturers4.Size = New System.Drawing.Size(555, 324)
-        Me.DgdLecturers4.TabIndex = 0
-        '
-        'LblDelete
-        '
-        Me.LblDelete.AutoSize = True
-        Me.LblDelete.Location = New System.Drawing.Point(22, 54)
-        Me.LblDelete.Name = "LblDelete"
-        Me.LblDelete.Size = New System.Drawing.Size(146, 13)
-        Me.LblDelete.TabIndex = 24
-        Me.LblDelete.Text = "Select Row then click delete:"
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.Location = New System.Drawing.Point(46, 83)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.BtnDelete.TabIndex = 25
-        Me.BtnDelete.Text = "Delete "
-        Me.BtnDelete.UseVisualStyleBackColor = True
-        '
         'Lecturers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -518,6 +588,7 @@ Partial Class Lecturers
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabLecturers)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Lecturers"
         Me.Text = "Lecturers"
         Me.Panel1.ResumeLayout(False)
@@ -530,14 +601,14 @@ Partial Class Lecturers
         Me.UpdateLecturer.ResumeLayout(False)
         Me.UpdateLecturer.PerformLayout()
         CType(Me.DgdLecturers2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.ViewLecturers.ResumeLayout(False)
         Me.ViewLecturers.PerformLayout()
         CType(Me.DgdLecturers3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DeleteLecturer.ResumeLayout(False)
         Me.DeleteLecturer.PerformLayout()
         CType(Me.DgdLecturers4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -579,9 +650,14 @@ Partial Class Lecturers
     Friend WithEvents LblHome1 As LinkLabel
     Friend WithEvents ViewLecturers As TabPage
     Friend WithEvents DgdLecturers3 As DataGridView
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblAllLecturers3 As Label
     Friend WithEvents DeleteLecturer As TabPage
     Friend WithEvents DgdLecturers4 As DataGridView
     Friend WithEvents LblDelete As Label
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents LblAllLecturers4 As Label
+    Friend WithEvents LblHome4 As LinkLabel
+    Friend WithEvents LblHome3 As LinkLabel
+    Friend WithEvents BtnReset As Button
+    Friend WithEvents LblLogout As LinkLabel
 End Class

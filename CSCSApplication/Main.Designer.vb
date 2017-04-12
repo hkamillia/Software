@@ -22,6 +22,7 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblCSCS = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -32,6 +33,7 @@ Partial Class Main
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.BtnLabs = New System.Windows.Forms.Button()
         Me.LblAdmin = New System.Windows.Forms.Label()
+        Me.LblLogout = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -39,6 +41,7 @@ Partial Class Main
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblLogout)
         Me.Panel1.Controls.Add(Me.LblCSCS)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -131,6 +134,20 @@ Partial Class Main
         Me.LblAdmin.TabIndex = 7
         Me.LblAdmin.Text = "Label2"
         '
+        'LblLogout
+        '
+        Me.LblLogout.ActiveLinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.AutoSize = True
+        Me.LblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblLogout.LinkColor = System.Drawing.Color.OliveDrab
+        Me.LblLogout.Location = New System.Drawing.Point(674, 16)
+        Me.LblLogout.Name = "LblLogout"
+        Me.LblLogout.Size = New System.Drawing.Size(82, 20)
+        Me.LblLogout.TabIndex = 8
+        Me.LblLogout.TabStop = True
+        Me.LblLogout.Text = "LOGOUT"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -145,6 +162,7 @@ Partial Class Main
         Me.Controls.Add(Me.BtnCreate)
         Me.Controls.Add(Me.BtnLecturers)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.Text = "Main"
         Me.Panel1.ResumeLayout(False)
@@ -165,4 +183,5 @@ Partial Class Main
     Friend WithEvents BtnDelete As Button
     Friend WithEvents BtnLabs As Button
     Friend WithEvents LblAdmin As Label
+    Friend WithEvents LblLogout As LinkLabel
 End Class
