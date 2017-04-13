@@ -31,8 +31,8 @@ Partial Class Login
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LblNewUser = New System.Windows.Forms.LinkLabel()
+        Me.LblForgotPassword = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,36 +133,36 @@ Partial Class Login
         Me.BtnLogin.Text = "Login"
         Me.BtnLogin.UseVisualStyleBackColor = False
         '
-        'LinkLabel1
+        'LblNewUser
         '
-        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Gold
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.GreenYellow
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.GreenYellow
-        Me.LinkLabel1.Location = New System.Drawing.Point(541, 314)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(54, 24)
-        Me.LinkLabel1.TabIndex = 10
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Sign Up"
+        Me.LblNewUser.ActiveLinkColor = System.Drawing.Color.Gold
+        Me.LblNewUser.AutoSize = True
+        Me.LblNewUser.BackColor = System.Drawing.Color.Transparent
+        Me.LblNewUser.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNewUser.ForeColor = System.Drawing.Color.GreenYellow
+        Me.LblNewUser.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblNewUser.LinkColor = System.Drawing.Color.GreenYellow
+        Me.LblNewUser.Location = New System.Drawing.Point(529, 314)
+        Me.LblNewUser.Name = "LblNewUser"
+        Me.LblNewUser.Size = New System.Drawing.Size(75, 24)
+        Me.LblNewUser.TabIndex = 10
+        Me.LblNewUser.TabStop = True
+        Me.LblNewUser.Text = "New User?"
         '
-        'LinkLabel2
+        'LblForgotPassword
         '
-        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.Gold
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.BackColor = System.Drawing.Color.Ivory
-        Me.LinkLabel2.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.GreenYellow
-        Me.LinkLabel2.Location = New System.Drawing.Point(508, 338)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(147, 24)
-        Me.LinkLabel2.TabIndex = 11
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Forgot your password?"
+        Me.LblForgotPassword.ActiveLinkColor = System.Drawing.Color.Gold
+        Me.LblForgotPassword.AutoSize = True
+        Me.LblForgotPassword.BackColor = System.Drawing.Color.Ivory
+        Me.LblForgotPassword.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblForgotPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LblForgotPassword.LinkColor = System.Drawing.Color.GreenYellow
+        Me.LblForgotPassword.Location = New System.Drawing.Point(508, 338)
+        Me.LblForgotPassword.Name = "LblForgotPassword"
+        Me.LblForgotPassword.Size = New System.Drawing.Size(147, 24)
+        Me.LblForgotPassword.TabIndex = 11
+        Me.LblForgotPassword.TabStop = True
+        Me.LblForgotPassword.Text = "Forgot your password?"
         '
         'Label3
         '
@@ -170,7 +170,7 @@ Partial Class Login
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gold
-        Me.Label3.Location = New System.Drawing.Point(601, 314)
+        Me.Label3.Location = New System.Drawing.Point(610, 314)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(14, 24)
         Me.Label3.TabIndex = 12
@@ -185,8 +185,8 @@ Partial Class Login
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(777, 484)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.LblForgotPassword)
+        Me.Controls.Add(Me.LblNewUser)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -217,7 +217,7 @@ Partial Class Login
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BtnLogin As Button
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents LblNewUser As LinkLabel
+    Friend WithEvents LblForgotPassword As LinkLabel
     Friend WithEvents Label3 As Label
 End Class

@@ -103,5 +103,15 @@ Public Class Login
         End If
 
     End Sub
+
+    Private Sub LblNewUser_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblNewUser.LinkClicked
+        Hide()
+        Users.Show()
+    End Sub
+
+    Private Sub LblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblForgotPassword.LinkClicked
+        Hide()
+        PasswordReset.Show()
+    End Sub
 End Class
 

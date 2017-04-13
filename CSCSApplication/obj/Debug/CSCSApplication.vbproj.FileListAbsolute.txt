@@ -47,3 +47,5 @@ C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplicatio
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.Labs.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.ViewTimetables.resources
 C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.DeleteTimetable.resources
+C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.Users.resources
+C:\Users\Kamillia\Desktop\CSCS\Software\CSCSApplication\obj\Debug\CSCSApplication.PasswordReset.resources

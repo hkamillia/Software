@@ -12,7 +12,7 @@ Public Class Labs
     Dim tables As DataTableCollection
     Dim source1 As New BindingSource
 
-    Private Sub Lecturers_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Labs_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         LoadForm()
     End Sub
 

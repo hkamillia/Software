@@ -100,6 +100,18 @@
     <Compile Include="Lecturers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PasswordReset.Designer.vb">
+      <DependentUpon>PasswordReset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordReset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PickSemester.Designer.vb">
       <DependentUpon>PickSemester.vb</DependentUpon>
     </Compile>
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturers.resx">
       <DependentUpon>Lecturers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordReset.resx">
+      <DependentUpon>PasswordReset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickSemester.resx">
       <DependentUpon>PickSemester.vb</DependentUpon>
